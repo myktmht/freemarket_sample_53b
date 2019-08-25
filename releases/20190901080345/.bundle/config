@@ -1,0 +1,5 @@
+---
+BUNDLE_PATH: "/var/www/freemarket_sample_53b/shared/bundle"
+BUNDLE_FROZEN: "true"
+BUNDLE_JOBS: "4"
+BUNDLE_WITHOUT: "development:test"

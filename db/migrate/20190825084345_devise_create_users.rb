@@ -4,30 +4,31 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
+      t.string :nickname,               null: false, unique: true, index: true
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-      ## Recoverable
+      ## Recoverable / パスワードリセット
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable / cookie用のトークンを生成・削除
       t.datetime :remember_created_at
 
-      ## Trackable
+      ## Trackable / サインイン回数、時間、IPアドレス
       # t.integer  :sign_in_count, default: 0, null: false
       # t.datetime :current_sign_in_at
       # t.datetime :last_sign_in_at
       # t.string   :current_sign_in_ip
       # t.string   :last_sign_in_ip
 
-      ## Confirmable
-      # t.string   :confirmation_token
-      # t.datetime :confirmed_at
-      # t.datetime :confirmation_sent_at
-      # t.string   :unconfirmed_email # Only if using reconfirmable
+      ## Confirmable / メールでの本登録確認、サインイン中の認証済み確認
+      t.string   :confirmation_token
+      t.datetime :confirmed_at
+      t.datetime :confirmation_sent_at
+      t.string   :unconfirmed_email # Only if using reconfirmable
 
-      ## Lockable
+      ## Lockable / サインイン失敗時のアカウントロック
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at

@@ -21,7 +21,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text||---|
+|profile_body|text||---|
 |last_name|string|---|
 |first_name|string|---|
 |last_name_kana|string|---|
@@ -93,7 +93,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index: true|
+|item_name|string|null: false, index: true|
 |price|integer|null: false|
 |description|text|null: false|
 |condition|integer|null: false|
@@ -121,7 +121,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|brand_name|string|null: false, unique: true|
 |brand_group_id|references|index: true, foreign_key: true|
 
 ### Association
@@ -132,7 +132,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|brand_group_name|string|null: false, unique: true|
 
 ### Association
 * has_many :brands
@@ -141,7 +141,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|image_name|string|null: false|
 |item_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
@@ -151,7 +151,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|category_name|string|null: false, unique: true|
 |parent_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
@@ -165,7 +165,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|size_name|string|null: false, unique: true|
 
 ### Association
 * has_many :categories, through: :size_charts
@@ -200,7 +200,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|---|
+|review_body|text|---|
 |value|integer|null: false|
 |trading_pertner_id|references|null: false, index: true, foreign_key: true|
 

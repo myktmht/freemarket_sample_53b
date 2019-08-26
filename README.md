@@ -173,7 +173,7 @@
 * has_many :size_charts
 
 ## size_chartsテーブル
-"
+
 |Column|Type|Options|
 |------|----|-------|
 |category_id|references|null: false, index: true, foreign_key: true|

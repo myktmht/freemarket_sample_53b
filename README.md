@@ -5,7 +5,7 @@
 |Column|Type|Option|
 |------|----|------|
 |nickname|string|null: false, unique: true, index: true|
-|email|string|null: false|
+|email|string|null: false, unique;: true|
 |password|string|---|
 
 ### Association

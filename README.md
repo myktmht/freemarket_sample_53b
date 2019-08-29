@@ -16,12 +16,13 @@
 * has_many :trading_partners
 * has_one :credit_card
 * has_one :profile
+* has_one :address
 
 ## profilesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|profile_body|text||---|
+|body|text||---|
 |last_name|string|---|
 |first_name|string|---|
 |last_name_kana|string|---|
@@ -30,6 +31,15 @@
 |birth_month|integer|---|
 |birth_day|integer|---|
 |phone_numder|integer|unique: true|
+|user_id|references|null: false, index: true, foreign_key: true|
+
+### Association
+* belongs_to :user
+
+## addressテーブル
+
+|Column|Type|Options|
+|------|----|-------|
 |zipcode|integer|---|
 |prefecture|integer|---|
 |city|string|---|
@@ -37,8 +47,9 @@
 |building|string|---|
 |user_id|references|null: false, index: true, foreign_key: true|
 
-### Association
+### 
 * belongs_to :user
+
 
 ## credit_cardsテーブル
 
@@ -93,7 +104,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|item_name|string|null: false, index: true|
+|name|string|null: false, index: true|
 |price|integer|null: false|
 |description|text|null: false|
 |condition|integer|null: false|
@@ -121,7 +132,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 |brand_group_id|references|index: true, foreign_key: true|
 
 ### Association
@@ -132,7 +143,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 * has_many :brands
@@ -141,7 +152,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|image_name|string|null: false|
+|name|string|null: false|
 |item_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
@@ -151,7 +162,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|category_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 |parent_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
@@ -165,7 +176,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|size_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 * has_many :categories, through: :size_charts
@@ -200,7 +211,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|review_body|text|---|
+|body|text|---|
 |value|integer|null: false|
 |trading_pertner_id|references|null: false, index: true, foreign_key: true|
 

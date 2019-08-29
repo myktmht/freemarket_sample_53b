@@ -29,7 +29,7 @@
 |birth_year|integer|---|
 |birth_month|integer|---|
 |birth_day|integer|---|
-|phone_numder|integer|uniaue: true|
+|phone_numder|integer|unique: true|
 |zipcode|integer|---|
 |prefecture|integer|---|
 |city|string|---|
@@ -159,7 +159,7 @@
 * has_many :items
 * has_many :child, class_name: "Category", foreign_key: "parent_id"
 * has_many :size_charts
-* has_many :sizes, through: :size_charts|
+* has_many :sizes, through: :size_charts
 
 ## sizesテーブル
 

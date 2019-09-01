@@ -20,3 +20,11 @@
     clear: both;
   }
 }
+
+@mixin clearfix_after() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

@@ -41,6 +41,7 @@ GEM
     airbrussh (1.3.3)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     builder (3.2.3)
     byebug (11.0.1)
@@ -73,10 +74,22 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    devise (4.7.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    diff-lcs (1.3)
     dotenv (2.7.4)
     erubis (2.7.0)
     excon (0.65.0)
     execjs (2.7.0)
+    factory_bot (5.0.2)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.0.2)
+      factory_bot (~> 5.0.2)
+      railties (>= 4.2.0)
     ffi (1.11.1)
     fog-aws (3.5.2)
       fog-core (~> 2.1)
@@ -162,6 +175,7 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -199,6 +213,26 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
+    rspec-core (3.8.2)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-rails (3.8.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.2)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
     sass (3.7.4)
@@ -244,6 +278,8 @@ GEM
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -265,7 +301,9 @@ DEPENDENCIES
   capistrano3-unicorn
   carrierwave
   coffee-rails (~> 4.2)
+  devise
   dotenv
+  factory_bot_rails
   fog-aws
   font-awesome-rails
   haml-rails
@@ -279,6 +317,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.7, >= 5.0.7.2)
+  rspec-rails
   sass-globbing
   sass-rails (~> 5.0)
   spring

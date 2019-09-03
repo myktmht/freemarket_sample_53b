@@ -47,7 +47,7 @@
 |building|string|---|
 |user_id|references|null: false, index: true, foreign_key: true|
 
-### 
+### Association
 * belongs_to :user
 
 

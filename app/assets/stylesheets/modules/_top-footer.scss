@@ -1,0 +1,114 @@
+.footer {
+  background-color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 0px 20px 10px;
+  &-nav {
+    width: 1020px;
+    margin: 0px auto;
+    a:hover {
+      text-decoration: underline;
+    }
+    &__information {
+      width: auto;
+      padding: 0px 40px 0px 0px;
+      display: inline-block;
+      margin-top: 18px;
+      vertical-align: top;
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin: 0;
+        font-family: Arial, '游ゴシック体' , 'YuGothic' , 'メイリオ', 'Meiryo', sans-serif;
+      }
+      ul {
+        list-style: none;
+        li {
+          line-height: 1.4em;
+          margin: 16px 0px 0px;
+          a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            opacity: 0.7;
+          }
+        }
+        a.icon {
+          display: inline-block;
+          margin-top: 30px;
+          list-style: none;
+          text-decoration: none;
+          color: inherit;
+          .fa.fa-twitter {
+            margin-right: 20px;
+            font-size: 28px;
+          }
+          .fa.fa-facebook-square {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    &__privacy {
+      display: inline-block;
+      margin-top: 18px;
+      vertical-align: top;
+      width: 39%;
+      padding: 0px 40px 0px 0px;
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4em;
+        font-family: Arial, '游ゴシック体' , 'YuGothic' , 'メイリオ', 'Meiryo', sans-serif;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      ul {
+        list-style: none;
+        li {
+          line-height: 1.4em;
+          margin: 16px 0px 0px;
+          a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            opacity: 0.7;
+          }
+        }
+      }
+      .left-li, .right-li {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+      }
+      .left-li {  
+        padding: 0px 10px 0px 0px;
+      }
+      .right-li {
+        padding-left: 10px;
+      }
+    }
+  }
+  &-logo {
+    width: 1020px;
+    margin: 30px auto 20px;
+    align-items: center;
+    display: flex;
+    &__mercari {
+      text-align: center;
+      color: inherit;
+      text-decoration: none;
+      &-img {
+        vertical-align: middle;
+        height: 33px;
+        width: 124px;
+      }
+    }
+    &__span {
+      padding-left: 15px;
+      width: 75%;
+      text-align: center;
+      vertical-align: baseline;
+    }
+  }
+}

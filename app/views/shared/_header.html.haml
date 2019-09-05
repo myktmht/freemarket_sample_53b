@@ -2,8 +2,8 @@
   .header-inner
     .header-top
       %h1
-        %a.header-top__logo{href: "/"}
-          %img.header-top__logo-img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?891577966"}/      
+        = link_to "#", class: 'header-top__logo' do
+          = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?891577966", class: 'header-top__logo-img', alt: "mercari"      
       %form.header-top__form{action: "#"}
         %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
         = fa_icon 'search'
@@ -12,34 +12,34 @@
         %ul.side
           %li.li-left
             %h2
-              %a{ href: "/" }
+              = link_to "#" do
                 = fa_icon 'list-ul'
                 %span カテゴリーから探す
           %li.li-right
             %h2
-              %a{ href: "/" }
+              = link_to "#" do
                 = fa_icon 'tag'
                 %span ブランドから探す 
       .right-side
         %ul.side
           %li
             %h2
-              %a{ href: "/" }
+              = link_to "#" do
                 = fa_icon 'heart'
                 %span いいね一覧
           %li
             %h2
-              %a{ href: "/" }
+              = link_to "#" do
                 = fa_icon 'bell'
                 %span お知らせ
           %li
             %h2
-              %a{ href: "/" }
+              = link_to "#" do
                 = fa_icon 'check'
                 %span やることリスト
           %li
             %h2
-              %a{ href: "/" }                
+              = link_to "#" do
                 %div.mypage
-                  %img{ src: 'https://static.mercdn.net/images/member_photo_noimage_thumb.png' }              
+                  = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png'            
                 %span マイページ

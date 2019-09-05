@@ -1,0 +1,509 @@
+I, [2019-09-01T08:03:57.141955 #15799]  INFO -- : Refreshing Gem list
+I, [2019-09-01T08:03:59.023859 #15799]  INFO -- : listening on addr=/var/www/freemarket_sample_53b/shared/tmp/sockets/unicorn.sock fd=11
+I, [2019-09-01T08:03:59.029603 #15799]  INFO -- : master process ready
+I, [2019-09-01T08:03:59.035754 #15802]  INFO -- : worker=0 ready
+I, [2019-09-01T08:03:59.333548 #15831]  INFO -- : executing ["/var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/freemarket_sample_53b/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/freemarket_sample_53b/shared/tmp/sockets/unicorn.sock>}] (in /var/www/freemarket_sample_53b/releases/20190901080345)
+I, [2019-09-01T08:03:59.333641 #15831]  INFO -- : forked child re-executing...
+I, [2019-09-01T08:03:59.599559 #15831]  INFO -- : inherited addr=/var/www/freemarket_sample_53b/shared/tmp/sockets/unicorn.sock fd=11
+I, [2019-09-01T08:03:59.599783 #15831]  INFO -- : Refreshing Gem list
+I, [2019-09-01T08:04:01.451125 #15831]  INFO -- : master process ready
+I, [2019-09-01T08:04:01.455714 #15872]  INFO -- : worker=0 ready
+I, [2019-09-01T08:04:01.545258 #15799]  INFO -- : reaped #<Process::Status: pid 15802 exit 0> worker=0
+I, [2019-09-01T08:04:01.545361 #15799]  INFO -- : master complete
+150.249.202.222 - - [01/Sep/2019:08:04:06 +0000] "GET / HTTP/1.0" 200 - 0.0343
+213.108.114.221 - - [01/Sep/2019:08:07:08 +0000] "GET / HTTP/1.0" 200 - 0.0034
+150.249.202.222 - - [01/Sep/2019:08:38:05 +0000] "GET / HTTP/1.0" 200 - 0.0040
+67.165.193.250 - - [01/Sep/2019:08:57:24 +0000] "GET / HTTP/1.0" 200 - 0.0041
+107.178.194.219 - - [01/Sep/2019:11:27:32 +0000] "GET / HTTP/1.0" 200 - 0.0039
+103.57.187.229 - - [01/Sep/2019:12:32:40 +0000] "GET / HTTP/1.0" 200 - 0.0042
+88.148.116.209 - - [01/Sep/2019:12:43:45 +0000] "GET / HTTP/1.0" 200 - 0.0049
+159.89.55.107 - - [01/Sep/2019:13:17:49 +0000] "GET / HTTP/1.0" 200 - 0.0171
+45.81.18.189 - - [01/Sep/2019:14:07:14 +0000] "GET / HTTP/1.0" 200 - 0.0030
+159.224.24.25 - - [01/Sep/2019:15:24:08 +0000] "GET / HTTP/1.0" 200 - 0.0030
+85.114.239.244 - - [01/Sep/2019:16:08:26 +0000] "GET / HTTP/1.0" 200 - 0.0030
+202.186.69.69 - - [01/Sep/2019:16:21:02 +0000] "GET / HTTP/1.0" 200 - 0.0029
+139.162.106.181 - - [01/Sep/2019:16:21:05 +0000] "GET / HTTP/1.0" 200 - 0.0030
+36.67.87.101 - - [01/Sep/2019:18:38:25 +0000] "GET / HTTP/1.0" 200 - 0.0031
+154.211.99.187 - - [01/Sep/2019:19:38:44 +0000] "GET / HTTP/1.0" 200 - 0.0030
+39.71.44.133 - - [01/Sep/2019:21:33:26 +0000] "GET / HTTP/1.0" 200 - 0.0029
+34.219.251.133 - - [01/Sep/2019:23:08:36 +0000] "OPTIONS /404 HTTP/1.0" 404 1722 0.0016
+125.198.71.143 - - [02/Sep/2019:00:39:09 +0000] "GET / HTTP/1.0" 200 - 0.0030
+178.93.60.12 - - [02/Sep/2019:04:57:51 +0000] "GET / HTTP/1.0" 200 - 0.0033
+139.5.71.81 - - [02/Sep/2019:08:07:51 +0000] "GET / HTTP/1.0" 200 - 0.0035
+186.226.219.160 - - [02/Sep/2019:09:25:59 +0000] "GET / HTTP/1.0" 200 - 0.0030
+125.41.93.156 - - [02/Sep/2019:10:07:57 +0000] "HEAD / HTTP/1.0" 200 - 0.0030
+89.248.174.219 - - [02/Sep/2019:10:43:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0021
+125.165.63.26 - - [02/Sep/2019:11:20:39 +0000] "GET / HTTP/1.0" 200 - 0.0029
+177.128.127.10 - - [02/Sep/2019:12:33:08 +0000] "GET / HTTP/1.0" 200 - 0.0029
+51.38.128.80 - - [02/Sep/2019:13:34:18 +0000] "GET / HTTP/1.0" 200 - 0.0028
+170.81.95.247 - - [02/Sep/2019:14:55:52 +0000] "GET / HTTP/1.0" 200 - 0.0030
+89.248.174.219 - - [02/Sep/2019:15:27:28 +0000] "GET /404?action=tree_page HTTP/1.0" 404 1722 0.0016
+213.23.12.149 - - [02/Sep/2019:17:33:58 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+213.23.12.149 - - [02/Sep/2019:17:33:58 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+213.23.12.149 - - [02/Sep/2019:17:34:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+213.23.12.149 - - [02/Sep/2019:17:34:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+213.23.12.149 - - [02/Sep/2019:17:34:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+213.23.12.149 - - [02/Sep/2019:17:34:02 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+77.247.108.184 - - [02/Sep/2019:18:00:54 +0000] "GET / HTTP/1.0" 200 - 0.0030
+103.135.39.239 - - [02/Sep/2019:18:44:39 +0000] "GET / HTTP/1.0" 200 - 0.0030
+89.248.174.219 - - [02/Sep/2019:20:34:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+178.128.110.202 - - [02/Sep/2019:20:49:19 +0000] "GET / HTTP/1.0" 200 - 0.0032
+59.37.167.136 - - [02/Sep/2019:20:53:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:53:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:53:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:53:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:53:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:53:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:53:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:53:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:20 +0000] "GET /404 HTTP/1.0" 404 1722 0.0020
+59.37.167.136 - - [02/Sep/2019:20:54:20 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:54:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:54:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0013
+59.37.167.136 - - [02/Sep/2019:20:54:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:54:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:54:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0045
+59.37.167.136 - - [02/Sep/2019:20:54:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:44 +0000] "GET /404?s=%2f%69%6e%64%65%78%2f%5c%74%68%69%6e%6b%5c%61%70%70%2f%69%6e%76%6f%6b%65%66%75%6e%63%74%69%6f%6e&function=%63%61%6c%6c%5f%75%73%65%72%5f%66%75%6e%63%5f%61%72%72%61%79&vars[0]=%6d%645&vars[1][]=%48%65%6c%6c%6f%54%68%69%6e%6b%50%48%50 HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:54:44 +0000] "GET /404?content=die(md5(HelloThinkPHP)) HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:45 +0000] "GET /404?s=/module/action/param1/${@die(md5(HelloThinkPHP))} HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:54:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:54:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:53 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:53 +0000] "GET /404?f=1 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:53 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:54:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:54:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:01 +0000] "GET /404?ssp=RfVbHu HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:55:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:13 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:55:13 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:13 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:17 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:17 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:17 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:20 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:20 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:20 +0000] "POST /404 HTTP/1.0" 404 1722 0.0150
+59.37.167.136 - - [02/Sep/2019:20:55:21 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:21 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:21 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:24 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:24 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:24 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:25 +0000] "POST /404 HTTP/1.0" 404 1722 0.0019
+59.37.167.136 - - [02/Sep/2019:20:55:25 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:25 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:28 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:28 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:28 +0000] "POST /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:29 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:29 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:29 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:32 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:32 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:32 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:33 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:33 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:33 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:36 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:36 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:36 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:37 +0000] "POST /404 HTTP/1.0" 404 1722 0.0020
+59.37.167.136 - - [02/Sep/2019:20:55:37 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:37 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:40 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:40 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:40 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:41 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:41 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:41 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:44 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:44 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:44 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:45 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:45 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:45 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:48 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:48 +0000] "POST /404 HTTP/1.0" 404 1722 0.0038
+59.37.167.136 - - [02/Sep/2019:20:55:48 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:49 +0000] "POST /404 HTTP/1.0" 404 1722 0.0019
+59.37.167.136 - - [02/Sep/2019:20:55:49 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:49 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:52 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:52 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:52 +0000] "POST /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:55:53 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:53 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:53 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:55:54 +0000] "POST /404 HTTP/1.0" 404 1722 0.0019
+59.37.167.136 - - [02/Sep/2019:20:55:54 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:54 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:55 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:55 +0000] "POST /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:55:55 +0000] "POST /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:57:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:24 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:25 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:28 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:57:29 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:32 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:33 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:36 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:37 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:40 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0021
+59.37.167.136 - - [02/Sep/2019:20:57:41 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:57:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:57:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:48 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+59.37.167.136 - - [02/Sep/2019:20:57:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:49 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:53 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:53 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+59.37.167.136 - - [02/Sep/2019:20:57:53 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:57:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:57:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:58:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:00 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:58:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:01 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:04 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:58:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0017
+59.37.167.136 - - [02/Sep/2019:20:58:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:05 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:08 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:58:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+59.37.167.136 - - [02/Sep/2019:20:58:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+59.37.167.136 - - [02/Sep/2019:20:58:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+109.242.244.177 - - [02/Sep/2019:21:25:32 +0000] "GET / HTTP/1.0" 200 - 0.0028
+39.135.1.156 - - [02/Sep/2019:23:31:56 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+39.135.1.156 - - [02/Sep/2019:23:31:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+39.135.1.156 - - [02/Sep/2019:23:31:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+39.135.1.156 - - [02/Sep/2019:23:31:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+39.135.1.156 - - [02/Sep/2019:23:31:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+39.135.1.156 - - [02/Sep/2019:23:31:57 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+39.135.1.156 - - [02/Sep/2019:23:31:58 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+39.135.1.156 - - [02/Sep/2019:23:31:58 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+39.135.1.156 - - [02/Sep/2019:23:31:58 +0000] "GET / HTTP/1.0" 200 - 0.0043
+109.72.248.118 - - [02/Sep/2019:23:44:21 +0000] "GET / HTTP/1.0" 200 - 0.0028
+125.198.71.143 - - [02/Sep/2019:23:48:28 +0000] "GET / HTTP/1.0" 200 - 0.0032
+5.233.218.24 - - [03/Sep/2019:00:13:01 +0000] "GET / HTTP/1.0" 200 - 0.0034
+78.170.137.55 - - [03/Sep/2019:02:48:17 +0000] "GET / HTTP/1.0" 200 - 0.0028
+109.187.22.234 - - [03/Sep/2019:02:57:56 +0000] "GET / HTTP/1.0" 200 - 0.0028
+177.131.121.43 - - [03/Sep/2019:03:26:40 +0000] "GET / HTTP/1.0" 200 - 0.0028
+95.9.107.69 - - [03/Sep/2019:03:27:47 +0000] "GET / HTTP/1.0" 200 - 0.0038
+128.14.134.170 - - [03/Sep/2019:03:36:47 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+34.76.18.230 - - [03/Sep/2019:06:57:53 +0000] "GET / HTTP/1.0" 200 - 0.0028
+125.198.71.143 - - [03/Sep/2019:06:57:55 +0000] "GET / HTTP/1.0" 200 - 0.0030
+103.81.152.186 - - [03/Sep/2019:07:33:49 +0000] "GET / HTTP/1.0" 200 - 0.0030
+41.59.208.35 - - [03/Sep/2019:08:35:41 +0000] "GET / HTTP/1.0" 200 - 0.0028
+188.237.135.116 - - [03/Sep/2019:09:28:06 +0000] "GET / HTTP/1.0" 200 - 0.0028
+5.189.142.120 - - [03/Sep/2019:10:25:18 +0000] "GET / HTTP/1.0" 200 - 0.0028
+23.225.205.74 - - [03/Sep/2019:13:17:06 +0000] "GET / HTTP/1.0" 200 - 0.0030
+23.225.205.74 - - [03/Sep/2019:13:17:07 +0000] "GET / HTTP/1.0" 200 - 0.0029
+109.94.122.136 - - [03/Sep/2019:15:14:25 +0000] "GET / HTTP/1.0" 200 - 0.0028
+45.232.152.2 - - [03/Sep/2019:19:12:14 +0000] "GET / HTTP/1.0" 200 - 0.0028
+95.38.50.196 - - [03/Sep/2019:19:32:44 +0000] "GET / HTTP/1.0" 200 - 0.0027
+177.102.93.31 - - [03/Sep/2019:20:25:21 +0000] "GET / HTTP/1.0" 200 - 0.0028
+67.180.187.237 - - [04/Sep/2019:00:20:37 +0000] "GET / HTTP/1.0" 200 - 0.0028
+39.98.213.1 - - [04/Sep/2019:01:02:04 +0000] "GET / HTTP/1.0" 200 - 0.0029
+168.181.121.26 - - [04/Sep/2019:02:55:44 +0000] "GET / HTTP/1.0" 200 - 0.0028
+91.214.63.75 - - [04/Sep/2019:03:07:54 +0000] "GET / HTTP/1.0" 200 - 0.0029
+192.99.20.226 - - [04/Sep/2019:03:35:35 +0000] "GET / HTTP/1.0" 200 - 0.0029
+202.89.79.179 - - [04/Sep/2019:03:51:14 +0000] "GET / HTTP/1.0" 200 - 0.0029
+125.198.71.143 - - [04/Sep/2019:05:16:38 +0000] "GET / HTTP/1.0" 200 - 0.0059
+I, [2019-09-04T05:19:38.967194 #30542]  INFO -- : executing ["/var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/freemarket_sample_53b/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:fd 11>}] (in /var/www/freemarket_sample_53b/releases/20190904051916)
+I, [2019-09-04T05:19:38.968180 #30542]  INFO -- : forked child re-executing...
+I, [2019-09-04T05:19:39.225328 #30542]  INFO -- : inherited addr=/var/www/freemarket_sample_53b/shared/tmp/sockets/unicorn.sock fd=11
+I, [2019-09-04T05:19:39.225557 #30542]  INFO -- : Refreshing Gem list
+/var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:244:in `validate_options': Missing required arguments: aws_access_key_id, aws_secret_access_key (ArgumentError)
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:268:in `handle_settings'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:98:in `new'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/services_mixin.rb:16:in `new'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:126:in `eager_load_fog'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:139:in `fog_credentials='
+	from /var/www/freemarket_sample_53b/releases/20190904051916/config/initializers/carrierwave.rb:11:in `block in <top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:161:in `configure'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave.rb:14:in `configure'
+	from /var/www/freemarket_sample_53b/releases/20190904051916/config/initializers/carrierwave.rb:5:in `<top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `block in load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:648:in `block in load_config_initializer'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/notifications.rb:166:in `instrument'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:647:in `load_config_initializer'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:611:in `each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:611:in `block in <class:Engine>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:30:in `instance_exec'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:30:in `run'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:228:in `block in tsort_each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:44:in `each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:44:in `tsort_each_child'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:415:in `call'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `call'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:226:in `tsort_each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:205:in `tsort_each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:54:in `run_initializers'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/application.rb:352:in `initialize!'
+	from /var/www/freemarket_sample_53b/releases/20190904051916/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require_relative'
+	from config.ru:4:in `block in <main>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/rack-2.0.7/lib/rack/builder.rb:55:in `instance_eval'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/rack-2.0.7/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn.rb:56:in `eval'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn.rb:56:in `block in builder'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn/http_server.rb:795:in `build_app!'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn/http_server.rb:139:in `start'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/bin/unicorn:126:in `<top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `<main>'
+E, [2019-09-04T05:19:40.633709 #15831] ERROR -- : reaped #<Process::Status: pid 30542 exit 1> exec()-ed
+125.198.71.143 - - [04/Sep/2019:05:19:43 +0000] "GET / HTTP/1.0" 200 - 0.0031
+I, [2019-09-04T05:22:14.212399 #31981]  INFO -- : executing ["/var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/freemarket_sample_53b/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:fd 11>}] (in /var/www/freemarket_sample_53b/releases/20190904052157)
+I, [2019-09-04T05:22:14.212491 #31981]  INFO -- : forked child re-executing...
+I, [2019-09-04T05:22:14.456929 #31981]  INFO -- : inherited addr=/var/www/freemarket_sample_53b/shared/tmp/sockets/unicorn.sock fd=11
+I, [2019-09-04T05:22:14.457118 #31981]  INFO -- : Refreshing Gem list
+/var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:244:in `validate_options': Missing required arguments: aws_access_key_id, aws_secret_access_key (ArgumentError)
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:268:in `handle_settings'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/service.rb:98:in `new'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/fog-core-2.1.2/lib/fog/core/services_mixin.rb:16:in `new'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:126:in `eager_load_fog'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:139:in `fog_credentials='
+	from /var/www/freemarket_sample_53b/releases/20190904052157/config/initializers/carrierwave.rb:11:in `block in <top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave/uploader/configuration.rb:161:in `configure'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/carrierwave-1.3.1/lib/carrierwave.rb:14:in `configure'
+	from /var/www/freemarket_sample_53b/releases/20190904052157/config/initializers/carrierwave.rb:5:in `<top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `block in load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/dependencies.rb:287:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:648:in `block in load_config_initializer'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/activesupport-5.0.7.2/lib/active_support/notifications.rb:166:in `instrument'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:647:in `load_config_initializer'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:611:in `each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/engine.rb:611:in `block in <class:Engine>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:30:in `instance_exec'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:30:in `run'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:228:in `block in tsort_each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:44:in `each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:44:in `tsort_each_child'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:415:in `call'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `call'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:226:in `tsort_each'
+	from /home/ec2-user/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:205:in `tsort_each'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/initializable.rb:54:in `run_initializers'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/railties-5.0.7.2/lib/rails/application.rb:352:in `initialize!'
+	from /var/www/freemarket_sample_53b/releases/20190904052157/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require_relative'
+	from config.ru:4:in `block in <main>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/rack-2.0.7/lib/rack/builder.rb:55:in `instance_eval'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/rack-2.0.7/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn.rb:56:in `eval'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn.rb:56:in `block in builder'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn/http_server.rb:795:in `build_app!'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/lib/unicorn/http_server.rb:139:in `start'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/gems/unicorn-5.4.1/bin/unicorn:126:in `<top (required)>'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `load'
+	from /var/www/freemarket_sample_53b/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `<main>'
+E, [2019-09-04T05:22:15.883471 #15831] ERROR -- : reaped #<Process::Status: pid 31981 exit 1> exec()-ed
+194.44.192.201 - - [04/Sep/2019:07:28:44 +0000] "GET / HTTP/1.0" 200 - 0.0028
+142.93.69.186 - - [04/Sep/2019:08:10:57 +0000] "GET / HTTP/1.0" 200 - 0.0029
+117.20.65.76 - - [04/Sep/2019:09:16:43 +0000] "GET / HTTP/1.0" 200 - 0.0029
+139.162.119.197 - - [04/Sep/2019:09:39:20 +0000] "GET / HTTP/1.0" 200 - 0.0028
+84.224.28.60 - - [04/Sep/2019:10:06:17 +0000] "GET / HTTP/1.0" 200 - 0.0029
+39.98.213.1 - - [04/Sep/2019:11:15:48 +0000] "GET / HTTP/1.0" 200 - 0.0029
+71.6.232.4 - - [04/Sep/2019:11:41:00 +0000] "GET / HTTP/1.0" 200 - 0.0029
+36.91.144.223 - - [04/Sep/2019:13:13:57 +0000] "GET / HTTP/1.0" 200 - 0.0030
+31.128.13.150 - - [04/Sep/2019:13:18:09 +0000] "GET / HTTP/1.0" 200 - 0.0029
+31.128.13.150 - - [04/Sep/2019:13:18:09 +0000] "GET /404 HTTP/1.0" 404 1722 0.0028
+31.128.13.150 - - [04/Sep/2019:13:18:10 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:10 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+31.128.13.150 - - [04/Sep/2019:13:18:11 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:11 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:12 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:13 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:13 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:14 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+31.128.13.150 - - [04/Sep/2019:13:18:14 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:15 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:15 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+31.128.13.150 - - [04/Sep/2019:13:18:16 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:17 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:17 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:18 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:18 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+31.128.13.150 - - [04/Sep/2019:13:18:19 +0000] "GET /404 HTTP/1.0" 404 1722 0.0018
+198.108.66.32 - - [04/Sep/2019:14:18:03 +0000] "GET / HTTP/1.0" 200 - 0.0030
+177.152.74.11 - - [04/Sep/2019:14:35:02 +0000] "GET / HTTP/1.0" 200 - 0.0029
+191.5.117.103 - - [04/Sep/2019:14:49:18 +0000] "GET / HTTP/1.0" 200 - 0.0045
+153.223.149.102 - - [04/Sep/2019:15:21:26 +0000] "GET / HTTP/1.0" 200 - 0.0028
+153.223.149.102 - - [04/Sep/2019:15:34:06 +0000] "GET / HTTP/1.0" 200 - 0.0029
+152.250.118.139 - - [04/Sep/2019:16:06:03 +0000] "GET / HTTP/1.0" 200 - 0.0027
+103.96.75.195 - - [04/Sep/2019:16:32:40 +0000] "GET / HTTP/1.0" 200 - 0.0029
+186.4.196.92 - - [04/Sep/2019:17:55:49 +0000] "GET / HTTP/1.0" 200 - 0.0028
+37.6.132.202 - - [04/Sep/2019:19:42:55 +0000] "GET / HTTP/1.0" 200 - 0.0027
+78.189.103.214 - - [04/Sep/2019:21:11:52 +0000] "GET / HTTP/1.0" 200 - 0.0029
+129.211.35.94 - - [04/Sep/2019:21:11:52 +0000] "GET /404 HTTP/1.0" 404 1722 0.0016
+60.191.38.77 - - [04/Sep/2019:22:20:30 +0000] "GET / HTTP/1.0" 200 - 0.0028
+189.18.252.197 - - [04/Sep/2019:22:34:32 +0000] "GET / HTTP/1.0" 200 - 0.0029
+125.198.71.143 - - [04/Sep/2019:22:39:19 +0000] "GET / HTTP/1.0" 200 - 0.0029
+125.198.71.143 - - [04/Sep/2019:23:35:44 +0000] "GET / HTTP/1.0" 200 - 0.0029
+125.198.71.143 - - [04/Sep/2019:23:37:29 +0000] "GET / HTTP/1.0" 200 - 0.0030
+45.10.88.53 - - [04/Sep/2019:23:57:43 +0000] "GET / HTTP/1.0" 200 - 0.0029
+103.100.132.104 - - [05/Sep/2019:00:33:42 +0000] "GET / HTTP/1.0" 200 - 0.0028
+128.14.134.170 - - [05/Sep/2019:00:41:20 +0000] "GET / HTTP/1.0" 200 - 0.0028
+216.75.6.164 - - [05/Sep/2019:02:36:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+216.75.6.164 - - [05/Sep/2019:02:36:44 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0014
+216.75.6.164 - - [05/Sep/2019:02:36:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:45 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:46 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:46 +0000] "GET /404 HTTP/1.0" 404 1722 0.0015
+216.75.6.164 - - [05/Sep/2019:02:36:46 +0000] "GET / HTTP/1.0" 200 - 0.0029
+95.0.46.115 - - [05/Sep/2019:02:54:42 +0000] "GET / HTTP/1.0" 200 - 0.0028
+139.162.119.197 - - [05/Sep/2019:05:53:54 +0000] "GET / HTTP/1.0" 200 - 0.0029
+94.136.152.206 - - [05/Sep/2019:09:20:08 +0000] "GET / HTTP/1.0" 200 - 0.0029
+103.15.80.109 - - [05/Sep/2019:09:29:38 +0000] "GET / HTTP/1.0" 200 - 0.0028
+125.198.71.143 - - [05/Sep/2019:10:05:44 +0000] "GET / HTTP/1.0" 200 - 0.0031
+125.198.71.143 - - [05/Sep/2019:10:18:10 +0000] "GET / HTTP/1.0" 200 - 0.0029
+125.198.71.143 - - [05/Sep/2019:10:18:11 +0000] "GET / HTTP/1.0" 200 - 0.0030
+200.100.104.31 - - [05/Sep/2019:10:55:01 +0000] "GET / HTTP/1.0" 200 - 0.0071

@@ -1,0 +1,142 @@
+.item-list {
+  &__name {
+    margin-bottom: 16px;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      flex: 1 1 0%;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.4em;
+      font-family: Arial, '游ゴシック体' , 'YuGothic' , 'メイリオ', 'Meiryo', sans-serif;
+    }
+    a {
+      font-size: 14px;
+      padding: 5px 16px 5px 5px;
+      text-decoration: none;
+      color: rgb(0, 149, 238);
+      display: block;
+      font-weight: 600;
+      position: relative;
+    }
+    a::before {
+      height: 10px;
+      width: 10px;
+      bottom: 0px;
+      content: "";
+      position: absolute;
+      right: 2px;
+      top: 0px;
+      transform: rotate(-45deg);
+      border-bottom: 2px solid rgb(0, 149, 238);
+      border-right: 2px solid rgb(0, 149, 238);
+      margin: auto;
+    }
+  }
+  &__box {
+    &-show {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px 20px;
+      display: grid;
+      .visibility {
+        visibility: visible;
+        transition: all 0.5s ease 0s;
+        opacity: 1;
+        a {
+          width: 100%;
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          text-decoration: none;
+          vertical-align: top;
+          figure {
+            font-family: Arial, '游ゴシック体' , 'YuGothic' , 'メイリオ', 'Meiryo', sans-serif;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,.18);
+            flex-direction: column-reverse;
+            margin: 0;
+            overflow: hidden;
+            z-index: 0;
+            .name {
+              width: 100%;
+              box-sizing: border-box;
+              color: #222;
+              font-size: 14px;
+              height: 64px;
+              line-height: 1.4em;
+              padding: 0 12px;
+              white-space: normal;
+              word-break: break-word;
+              align-items: center;
+              display: flex;
+              span {
+                display: inline-block;
+                height: 2.8em;
+                overflow: hidden;
+                position: relative;
+              }
+              span::after {
+                background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
+                bottom: 0;
+                content: "";
+                height: 50%;
+                position: absolute;
+                right: 0;
+                width: 50%;
+              }
+            }
+            .price {
+              height: 0;
+              overflow: hidden;
+              padding: 0 0 100%;
+              position: relative;
+              width: 100%;
+              span {
+                align-items: center;
+                background: rgba(0,0,0,.4);
+                border-radius: 0 14px 14px 0;
+                bottom: 8px;
+                box-sizing: border-box;
+                color: #fff;
+                display: inline-flex;
+                font-size: 17px;
+                height: 28px;
+                letter-spacing: .02em;
+                margin: 0;
+                padding: 0 12px;
+                position: absolute;
+                z-index: 2;
+              }
+              img {
+                bottom: 0;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                object-fit: cover;
+                vertical-align: top;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .visibility a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .visibility a:hover:after {
+        box-shadow: rgba(0, 145, 255, 0.4) 0px 0px 0px 2px inset;
+      }
+    }
+  }
+}

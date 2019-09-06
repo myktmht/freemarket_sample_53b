@@ -1,3 +1,4 @@
+
 # DB設計
 
 ## usersテーブル
@@ -112,11 +113,7 @@
 |shipping_from|integer|null: false|
 |days_before_shipping|integer|null: false|
 |shipping_method|integer|null: false|
-<<<<<<< HEAD
 |trade_status|integer|default(0)|
-=======
-|trade_status|integer|null: true|
->>>>>>> d4342bc... Update README.md
 |brand_id|references|index: true, foreign_key: true|
 |category_id|references|null: false, index: true, foreign_key: true|
 |user_id|references|null: false, index: true, foreign_key: true|

@@ -18,7 +18,7 @@ check_client_connection false
 run_once = true
 
 before_fork do |server, worker|
-   defined?(ActiveRecord::Base) &&
+  defined?(ActiveRecord::Base) &&
     ActiveRecord::Base.connection.disconnect!
 
   if run_once
@@ -37,5 +37,5 @@ before_fork do |server, worker|
 end
 
 after_fork do |_server, _worker|
-  defined?(ActiveRecord::Base) &&  ActiveRecord::Base.establish_connection
+  defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
 end

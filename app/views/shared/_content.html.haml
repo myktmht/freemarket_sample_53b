@@ -1,0 +1,36 @@
+.content
+  .content-list
+    .tag.category
+      %h2 人気のカテゴリー
+      .tag-list
+        %ul 
+          %li
+            = link_to "#" do
+              レディース
+          %li
+            = link_to "#" do
+              メンズ
+          %li 
+            = link_to "#" do
+              家電・スマホ・カメラ
+          %li 
+            = link_to "#" do
+              おもちゃ・ホビー・グッズ
+    .item
+      = render partial: 'shared/item-list'
+    .tag.brand
+      %h2 人気のブランド
+      .tag-list
+        %ul 
+          %li
+            = link_to "#" do
+              シャネル
+          %li
+            = link_to "#" do
+              ルイヴィトン
+          %li 
+            = link_to "#" do
+              シュプリーム
+          %li 
+            = link_to "#" do
+              ナイキ

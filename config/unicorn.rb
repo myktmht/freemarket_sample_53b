@@ -1,8 +1,10 @@
-app_path = File.expand_path('../../../',__FILE__)
+app_path = File.expand_path('../../../', __FILE__)
+
+worker_processes 1
 
 working_directory "#{app_path}/current"
-pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
+pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
@@ -16,7 +18,7 @@ check_client_connection false
 run_once = true
 
 before_fork do |server, worker|
-   defined?(ActiveRecord::Base) &&
+  defined?(ActiveRecord::Base) &&
     ActiveRecord::Base.connection.disconnect!
 
   if run_once
@@ -35,5 +37,5 @@ before_fork do |server, worker|
 end
 
 after_fork do |_server, _worker|
-  defined?(ActiveRecord::Base) &&  ActiveRecord::Base.establish_connection
+  defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
 end

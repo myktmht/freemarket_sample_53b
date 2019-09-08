@@ -57,11 +57,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|authorization_code|integer|null: false, unique: true|
-|security_code|integer|null: false|
-|month|integer|null: false|
-|year|integer|null :false|
-|user_id|references|null: false, index: true, foreign_key: true|
+|user_id|references|foreign_key: true|
+|customer_id|references|foreign_key: true|
+|card_id|references|foreign_key: true|
 
 ### Association
 * belongs_to :user

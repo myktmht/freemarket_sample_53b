@@ -14,10 +14,11 @@
 * has_many :items
 * has_many :likes
 * has_many :sns_credentials
-* has_many :trading_partners
+* has_many :reviews
 * has_one :credit_card
 * has_one :profile
 * has_one :address
+* has_one :order
 
 ## profilesテーブル
 
@@ -195,37 +196,24 @@
 * belongs_to :category
 * belongs_to :size
 
-## trading_partnersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|buyer_id|references|null: false, index: true, foreign_key: { to_table: :users }|
-|seller_id|references|null: false, index: true, foreign_key: { to_table: :users }|
-
-### Association
-* belongs_to :buyer_id, class_name: "User"
-* belongs_to :seller_id, class_name: "User"
-* has_many :order
-* has_many :reviews
-
 ## reviewsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |body|text|---|
 |value|integer|null: false|
-|trading_pertner_id|references|null: false, index: true, foreign_key: true|
+|user_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
-* belongs_to :trading_partner
+* belongs_to :user
 
 ## ordersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|status|integer|null: false|
 |item_id|references|null: false, index: true, foreign_key: true|
 |trading_partner_id|references|null: false, index: true, foreign_key: true|
+|user_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
 * belongs_to :item
-* belongs_to :trading_partner
+* belongs_to :user

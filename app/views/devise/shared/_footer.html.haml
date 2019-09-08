@@ -1,0 +1,14 @@
+.user-footer
+  .single-footer
+    %nav
+      %ul.clearfix
+        %li 
+          = link_to "プライバシーポリシー", "#"
+        %li 
+          = link_to "メルカリ利用規約", "#"
+        %li 
+          = link_to "特定商取引に関する表記", "#"
+    .single-footer__image
+      = link_to image_tag(src = "/assets/logo-gray.svg", class: "hover-on-image", alt: "mercari", size: '80x65'), root_path
+    %p 
+      %small &copy 2019 Mercari

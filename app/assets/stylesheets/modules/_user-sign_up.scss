@@ -1,0 +1,97 @@
+.login {
+  background-color: $color-white;
+  font-size: 14px;
+  text-align: center;
+  &-btn {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 326px;
+  }
+  &__no-account {
+    background-color: white;
+    width: 328px;
+    padding: 40px 64px;
+    margin: 0 auto;
+    border-bottom: solid 1px $color-white;
+    p {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    &__btn {
+      line-height: 40px;
+      height: 40px;  
+      margin: 8px 0 0;
+      border: 1px solid $color-blue;
+      background: $color-blue;
+      color: white;
+    }
+  }
+  &__form-inner {
+    background-color: white;
+    width: 328px;
+    margin: 0 auto;
+    padding: 32px 64px;
+    button {
+      height: 50px;
+      font-size: 14px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+    .facebook-login {
+      background-color: $color-facebook;
+      color: white;
+      position: relative;
+      i {
+        font-size: 26px;
+        display: inline-block;
+        left: 14px;
+        line-height: 48px;
+        position: absolute;
+      }
+    }
+    .google-login {
+      border: 1px solid #979797;
+      background: #fff url(/assets/google.svg) no-repeat 3px top;
+      margin-top: 16px;
+    }
+    &_second {
+      background-color: white;
+      width: 328px;
+      margin: 0 auto;
+      padding: 24px 64px 32px;
+      .field {
+        input {
+          width: 292px;
+          @include input-default;
+        }
+        &__pw {
+          margin-top: 24px;
+        }
+      }
+      .actions__btn {
+        height: 50px;
+        width: 328px;
+        font-size: 14px;
+        background-color: $color-red;
+        border: 1px solid $color-red;
+        color: white;
+        margin-top: 24px;
+      }
+    }
+  }
+  .shared__new_password {
+    text-decoration: none;
+    display: block;
+    margin-top: 40px;
+    text-align: left;
+    color: $color-blue;
+    :link {
+      color: #333;
+    }      
+    :visited {
+      color: #333;
+    }
+    @include small-link;
+  }
+}

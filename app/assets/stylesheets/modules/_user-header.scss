@@ -1,0 +1,17 @@
+.user-header {
+  background-color: $color-white;
+  height: 128px;
+  width: 100%;
+  .single-header {
+    height: 49px;
+    width: 456px;
+    line-height: 49px;
+    padding: 40px 0 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    &__image:hover {
+      opacity: 0.7;
+    }
+  }
+}

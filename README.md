@@ -8,6 +8,7 @@
 |nickname|string|null: false, unique: true, index: true|
 |email|string|null: false, unique;: true|
 |password|string|---|
+|item_id|references|foreign_key: true|
 
 ### Association
 * has_many :comments
@@ -18,7 +19,6 @@
 * has_one :credit_card
 * has_one :profile
 * has_one :address
-* has_one :order
 
 ## profilesテーブル
 
@@ -128,7 +128,6 @@
 * has_many :contents
 * has_many :images
 * has_many :likes
-* has_one :order
 
 ## brandsテーブル
 
@@ -205,15 +204,4 @@
 |user_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
-* belongs_to :user
-
-## ordersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|item_id|references|null: false, index: true, foreign_key: true|
-|trading_partner_id|references|null: false, index: true, foreign_key: true|
-|user_id|references|null: false, index: true, foreign_key: true|
-
-### Association
-* belongs_to :item
 * belongs_to :user

@@ -16,7 +16,7 @@
 * has_many :likes
 * has_many :sns_credentials
 * has_many :reviews
-* has_one :credit_card
+* has_one :card
 * has_one :profile
 * has_one :address
 
@@ -53,7 +53,7 @@
 * belongs_to :user
 
 
-## credit_cardsテーブル
+## cardテーブル
 
 |Column|Type|Options|
 |------|----|-------|

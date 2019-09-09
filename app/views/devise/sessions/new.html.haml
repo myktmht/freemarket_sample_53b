@@ -1,4 +1,4 @@
-= render "devise/shared/header"
+= render "shared/single-header"
 .login
   .login__no-account
     %P アカウントをお持ちでない方はこちら
@@ -18,5 +18,4 @@
       .actions
         = f.submit "ログイン", class: "actions__btn"
       = render "devise/shared/links"
-.shared
-  = render "devise/shared/footer"
+= render "shared/single-footer"

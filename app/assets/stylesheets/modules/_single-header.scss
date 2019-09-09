@@ -1,8 +1,8 @@
-.user-header {
+.single-header {
   background-color: $color-white;
   height: 128px;
   width: 100%;
-  .single-header {
+  &__logo {
     height: 49px;
     width: 456px;
     line-height: 49px;

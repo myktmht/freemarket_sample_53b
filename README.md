@@ -53,7 +53,7 @@
 * belongs_to :user
 
 
-## cardテーブル
+## cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|

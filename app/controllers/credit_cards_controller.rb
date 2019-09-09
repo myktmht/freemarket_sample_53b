@@ -1,4 +1,4 @@
-class CardController < ApplicationController
+class Credit_cardsController < ApplicationController
 
   require "payjp"
 
@@ -18,7 +18,7 @@ class CardController < ApplicationController
       customer = Payjp::Customer.create(
       description: '登録テスト',
       email: current_user.email,
-      card: params['payjp-token']
+      card: params['payjp-token'],
       metadata: {user_id: current_user.id}
       )
       @card = Credit_card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)

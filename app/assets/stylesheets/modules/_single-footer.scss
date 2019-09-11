@@ -1,0 +1,33 @@
+.single-footer {
+  width: 100%;
+  background-color: $color-white;
+  padding: 0;
+  &__nav {
+    height: 180px;
+    padding-top: 40px;
+    margin: 0 auto;
+    color: $color-black;
+    nav {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0 6px;
+        font-size: 12px;
+        :link {
+          color: $color-black;
+        }      
+        :visited {
+          color: $color-black;
+        }
+        @include small-link;  
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+  &__image {
+    text-align: center;
+    margin-top: 40px;
+  }
+}

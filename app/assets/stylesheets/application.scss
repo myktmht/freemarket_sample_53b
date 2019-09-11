@@ -1,6 +1,8 @@
 @import "./_reset";
 @import "font-awesome";
 @import "mixins/mixin";
+@import "variable";
+@import "common";
 
 // toppage_scss
 @import "modules/index";
@@ -10,3 +12,8 @@
 @import "modules/sell-btn";
 @import "modules/app-baner";
 @import "modules/top-footer";
+
+// user_signup_scss
+@import "modules/user-sign_up";
+@import "modules/single-header";
+@import "modules/single-footer";

@@ -28,3 +28,20 @@
     clear: both;
   }
 }
+
+// 1行テキストボックスのデフォルト設定（@include input-default;）
+@mixin input-default {
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  line-height: 1.5em;
+  font-size: 16px;
+  border: 1px solid #ccc; 
+}
+
+// hover時アンダーライン＆opacity一括指定（@include small-link;）
+@mixin small-link {
+  :hover{
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}

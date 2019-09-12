@@ -1,3 +1,57 @@
 = render "shared/single-header"
-
+.single-main
+  .sell-container
+    .single-main__title 商品の情報を入力
+    .sell-container__form
+      = form_for @item do |f|
+        .sell-container__form__images
+          %h3 出品画像
+          %span 必須
+          %p 最大10枚までアップロードできます
+          .sell-container__form__images__area
+        .sell-container__form__content
+          = f.label :name, "出品名"
+          = f.text_field :name, placeholder: "商品名（必須40文字まで）"
+          %span 必須
+          = f.label :description, "出品の説明"
+          = f.text_area :description, placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          %span 必須
+        .sell-container__form__content
+          %h3.sub-head 商品の詳細 
+          %p カテゴリー
+          %span 必須
+          -# = f.select
+          = f.label :condition, "商品の状態"
+          %span 必須
+          -# = f.select
+        .sell-container__form__content
+          %h3 配送について
+          = f.label :shipping_fee, "配送料の負担"
+          %span 必須 
+          -# = f.select
+          %p 発送元の地域
+          %span 必須
+          -# = f.select
+          %p 発送元までの日数
+          %span 必須
+          -# = f.select
+        .sell-container__selling-price
+          %h3 販売価格(300〜9,999,999)
+          %ul
+            %li
+              = f.label :price, "価格"
+              %span 必須
+              = f.text_field :price, placeholder: "例）300"
+            %li
+              .li-left 販売手数料
+              .li-right &#045;
+            %li
+              .li-left 販売利益
+              .li-right &#045;
+        .sell-container__btn-box
+          %P 禁止されている出品、行為を必ずご確認ください。
+          %P またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+          %P また、出品をもちまして加盟店規約に同意したことになります。
+          = f.submit '出品する'
+          %a.back-btn もどる
 = render "shared/single-footer"

@@ -2,6 +2,9 @@
 @import "font-awesome";
 @import "mixins/mixin";
 
+@import "./common_layout/form";
+@import "mypage_card";
+
 // toppage_scss
 @import "modules/index";
 @import "modules/top-header";

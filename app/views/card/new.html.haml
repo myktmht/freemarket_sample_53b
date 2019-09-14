@@ -1,0 +1,20 @@
+.registration__container
+  .registration__title 支払い方法
+  %form.registration__content
+    .registration__content__box
+      =render 'render/input-form-required',label:'カード番号',example:'半角数字のみ'
+      = image_tag 'credit_card.jpg'
+      .month-form-box
+        %label 有効期限
+        %span.required 必須
+        .select_wrap
+          = date_select(:test, :test, use_month_numbers:true, discard_year:true, discard_day:true)
+          %i.fa.fa-chevron-down
+        %h2 月
+        .select_wrap
+          = date_select(:test1, :test1, discard_month:true,start_year:2019)
+          %i.fa.fa-chevron-down
+        %h2 年 
+      =render 'render/input-form-required',label:'セキュリティコード',example:'カード背面４桁もしくは３桁の番号'
+      =render 'render/help-link',text:'カード裏面の番号とは？',address:root_path
+      =render 'render/input-form-button',name:'次へ進む'

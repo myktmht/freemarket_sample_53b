@@ -1,4 +1,4 @@
-class MypageCardController < ApplicationController
+class MypageCardController < UsersController
   def index
   end
 

@@ -28,16 +28,31 @@
     line-height: 48px;
     text-align: center;  
   }
+
+  @mixin a-tag-hover{
+    opacity: 0.8;
+    text-decoration: underline;
+  }
   
-   @mixin form-default {
+  @mixin form-default{
     margin-top: 40px;
     overflow: hidden;
     label{
-      font-weight: 600;  
+      font-weight: 600;
     }
     p{
       margin-top: 8px;
       line-height: 1.5;
+      font-size: 14px;
+    }
+    p.text-center{
+      text-align: center;
+      a{
+        color: #0099e8;
+      }
+      a:hover{
+        @include a-tag-hover;
+      }
     }
     span.optional{
       margin-left: 8px;
@@ -103,18 +118,6 @@
     img{
       width: 100%;
       padding-top: 8px;
-    }
-  }
-  
-   .registration__container{
-    background: #fff;
-    width: 700px;
-    margin: 0 auto;
-    .registration__title{
-      @include registration-title;
-    }
-    .registration__content{
-      @include registration__content;
     }
   }
   

@@ -1,57 +1,87 @@
 = render "shared/single-header"
 .single-main
   .sell-container
-    .single-main__title 商品の情報を入力
-    .sell-container__form
+    %h2.sell-container__title 商品の情報を入力
+    .sell-contents
       = form_for @item do |f|
-        .sell-container__form__images
-          %h3 出品画像
+        = f.hidden_field :user_id, value: "#{@item.user_id}"
+        .sell-content
+          .sell-content__images
+            %h3 出品画像
+            %span 必須
+            %p 最大10枚までアップロードできます
+            .sell-content__images-area
+              %i.fa.fa-camera
+        .sell-content
+          = f.label :name, "商品名"
           %span 必須
-          %p 最大10枚までアップロードできます
-          .sell-container__form__images__area
-        .sell-container__form__content
-          = f.label :name, "出品名"
-          = f.text_field :name, placeholder: "商品名（必須40文字まで）"
-          %span 必須
-          = f.label :description, "出品の説明"
-          = f.text_area :description, placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-          %span 必須
-        .sell-container__form__content
-          %h3.sub-head 商品の詳細 
-          %p カテゴリー
-          %span 必須
-          -# = f.select
-          = f.label :condition, "商品の状態"
-          %span 必須
-          -# = f.select
-        .sell-container__form__content
-          %h3 配送について
-          = f.label :shipping_fee, "配送料の負担"
-          %span 必須 
-          -# = f.select
-          %p 発送元の地域
-          %span 必須
-          -# = f.select
-          %p 発送元までの日数
-          %span 必須
-          -# = f.select
-        .sell-container__selling-price
-          %h3 販売価格(300〜9,999,999)
-          %ul
-            %li
-              = f.label :price, "価格"
+          = f.text_field :name, placeholder: "商品名（必須40文字まで）", class: "input-default"
+          .sell-content__margin
+            = f.label :description, "商品の説明"
+            %span 必須
+            = f.text_area :description, placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "textarea-default"
+        .sell-content
+          .sell-content__sub-head 
+            %h3 商品の詳細
+          .sell-content__groups
+            .sell-content__group
+              = f.label :category_id, "カテゴリー"
               %span 必須
-              = f.text_field :price, placeholder: "例）300"
-            %li
-              .li-left 販売手数料
-              .li-right &#045;
-            %li
-              .li-left 販売利益
-              .li-right &#045;
-        .sell-container__btn-box
-          %P 禁止されている出品、行為を必ずご確認ください。
-          %P またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
-          %P また、出品をもちまして加盟店規約に同意したことになります。
-          = f.submit '出品する'
+              = f.collection_select :category_id, @category1, :parent_id, :name, {include_blank: "---"}, class: "select-default"
+              %i.fa.fa-chevron-down
+            .sell-content__group.sell-content__margin
+              = f.label :condition, "商品の状態"
+              %span 必須
+              = f.select :condition,[["新品、未使用", 1], ["未使用に近い", 2], ["目立った傷や汚れなし", 3], ["やや傷や汚れあり", 4], ["傷や汚れあり", 5], ["全体的に状態が悪い", 6]], {include_blank: "---"}, class: "select-default"
+              %i.fa.fa-chevron-down
+        .sell-content
+          .sell-content__sub-head 
+            %h3 配送について
+            %i.fa.fa-question-circle
+          .sell-content__groups
+            .sell-content__group
+              = f.label :shipping_fee, "配送料の負担"
+              %span 必須 
+              -# = f.select
+              -# %i.fa.fa-chevron-down
+            .sell-content__group.sell-content__margin
+              = f.label :shipping_from, "発送元の地域"
+              %span 必須
+              = f.collection_select :shipping_from, Prefecture.all, :id, :name, {include_blank: "---"}, class: "select-default"
+              %i.fa.fa-chevron-down
+            .sell-content__group.sell-content__margin
+              = f.label :days_before_shipping, "発送までの日数"
+              %span 必須
+              = f.select :days_before_shipping,[["1~2日で発送", 1], ["2~3日で発送", 2], ["4~7日で発送", 3]], {include_blank: "---"}, class: "select-default"
+              %i.fa.fa-chevron-down
+        .sell-content
+          .sell-content__sub-head
+            %h3 販売価格(300〜9,999,999)
+            %i.fa.fa-question-circle
+          .sell-content__calc
+            %ul
+              %li.price
+                .li-left.li-left-price
+                  = f.label :price, "価格"
+                  %span 必須
+                .li-right
+                  .li-right__input
+                    %a &#165;
+                    = f.text_field :price, placeholder: "例）300", class: "li-right__input-default"
+              %li.fee
+                .li-left 販売手数料(10%)
+                .li-right &#045;
+              %li.benefit
+                .li-left 販売利益
+                .li-right &#045;
+        .sell-content__submit
+          - prohibited_items = link_to "禁止されている出品","#", target: :_blank
+          - prohibited_conduct = link_to "行為","#", target: :_blank
+          - counterfeit_goods = link_to "偽ブランドの販売", "#", target: :_blank
+          - seller_terms = link_to "加盟店規約", "#"
+          %P #{prohibited_items}、#{prohibited_conduct}を必ずご確認ください。
+          %P またブランド品でシリアルナンバー等がある場合はご記載ください。#{counterfeit_goods}は犯罪であり処罰される可能性があります。
+          %P また、出品をもちまして#{seller_terms}に同意したことになります。
+          = f.submit '出品する', class: "submit-btn"
           %a.back-btn もどる
 = render "shared/single-footer"

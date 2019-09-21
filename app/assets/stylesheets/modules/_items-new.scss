@@ -30,6 +30,7 @@
         padding: 2px 4px;
         margin-left: 8px;
         border-radius: 2px;
+        vertical-align: top;
       }
       label {
         // フォームの名称
@@ -53,6 +54,10 @@
         font-size: 16px;
         line-height: 1.5;
         width: 598px;
+        margin-top: 8px;
+      }
+      .sell-selector {
+        position: relative;
       }
       .select-default {
         // selectのデフォルト(適宜共通CSSと置き換え)
@@ -68,21 +73,24 @@
         display: block;
         width: 100%;
         position: relative;
-        select {
-          // デフォルトの下向き矢を非表示
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-        }
-        ::-ms-expand {
-          display: none;
-        }
         &-arrow {
-          // 任意の下向き矢を置く場合、クラスに-arrowをつける
+          // 任意の下向きの矢を置く場合、クラスに-arrowをつける
           position: absolute;
           right: 16px;
           top: 50%;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          color: gray;
         }
+      }
+      select {
+        // デフォルトの下向きの矢を非表示
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      ::-ms-expand {
+        display: none;
       }
       .sell-content {
         @include clearfix_after();
@@ -90,7 +98,12 @@
         border-top: 1px solid $color-white;
         &__images {
           width: 620px;
+          p {
+            font-size: 14px;
+            padding-top: 8px;
+          }
           &-area {
+            margin-top: 16px;
             padding: 40px;
             height: 80px;
             background-color: $color-white;
@@ -118,7 +131,6 @@
           margin: 0;
           font-size: 14px;
         }
-
 
         &__calc {
           float: right;

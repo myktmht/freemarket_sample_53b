@@ -1,0 +1,11 @@
+.registration__container{
+    background: #fff;
+    width: 700px;
+    margin: 0 auto;
+    .registration__title{
+      @include registration-title;
+    }
+    .registration__content{
+      @include registration__content;
+    }
+  }

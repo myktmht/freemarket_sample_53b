@@ -9,7 +9,6 @@
     font-size: 14px;
     .mypage-card__month-form-box{
       @include form-default;
-      // width: 150px;
       .selecters_wrap{
         .select_wrap{
           width: calc(50% - 32px);

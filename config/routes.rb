@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     
     resources :users, only: [:show]
     resources :items, only: [:new, :create, :show]
+    resources :card, only: [:new]
+    resources :mypage_card, only: [:index, :new]
   
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root "tests#index"

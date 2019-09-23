@@ -18,5 +18,8 @@
 @import "modules/single-header";
 @import "modules/single-footer";
 
-// items
-@import "modules/items-new"
+
+@import "modules/items-new";
+@import "common_layout/form";
+@import "./registration_box.scss";
+@import "mypage_card";

@@ -22,24 +22,39 @@
                 %span ブランドから探す 
       .right-side
         %ul.side
-          %li
-            %h2
-              = link_to "#" do
-                = fa_icon 'heart'
-                %span いいね一覧
-          %li
-            %h2
-              = link_to "#" do
-                = fa_icon 'bell'
-                %span お知らせ
-          %li
-            %h2
-              = link_to "#" do
-                = fa_icon 'check'
-                %span やることリスト
-          %li
-            %h2
-              = link_to "#" do
-                %div.mypage
-                  = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png'            
-                %span マイページ
+          - if current_user
+            -# 一時的に設置、マイページ上にログアウトボタンを作成した後で消す
+            %li
+              %h2
+                = link_to destroy_user_session_path do
+                  %span ログアウト
+            - unless current_page?(root_path)
+              %li
+                %h2
+                  = link_to "#" do
+                    = fa_icon 'heart'
+                    %span いいね一覧
+            %li
+              %h2
+                = link_to "#" do
+                  = fa_icon 'bell'
+                  %span お知らせ
+            %li
+              %h2
+                = link_to "#" do
+                  = fa_icon 'check'
+                  %span やることリスト
+            %li
+              %h2
+                = link_to "#" do
+                  %div.mypage
+                    = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png'            
+                  %span マイページ
+          - else
+            .user-link
+              .signup
+                = link_to new_user_registration_path, class: 'user-link__signup' do
+                  新規会員登録
+              .signin
+                = link_to new_user_session_path, class: 'user-link__signin' do
+                  ログイン      

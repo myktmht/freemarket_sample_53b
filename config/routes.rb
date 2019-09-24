@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
     devise_for :users
     
-    resources :users, only: [:show] do
-      resources :card, only: [:new]
-    end
+    resources :users, only: [:show]
+    resources :card, only: [:new]
     resources :items, only: [:new, :create, :show]
     resources :mypage_card, only: [:index, :new]
   

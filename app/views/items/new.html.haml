@@ -12,6 +12,7 @@
             %p 最大10枚までアップロードできます
             .sell-content__images-area
               %i.fa.fa-camera
+              = f.file_field :images, class: "hidden", multiple: true
         .sell-content
           = f.label :name, "商品名"
           %span 必須

@@ -3,9 +3,9 @@ $(function(){
     var input = $(this).val();
 
     if (Math.sign(input) === 1) {
-      var price_commission = Math.floor(input * 0.1)
-      var price_profit = input - price_commission;
-
+      var price_commission = Math.floor(input * 0.1).toString().replace(/(\d)(?=(\d{3})+$)/g , '$1,');
+      var price_profit = (input - Math.floor(input * 0.1)).toString().replace(/(\d)(?=(\d{3})+$)/g , '$1,');
+      console.log(input);
       $('#commission').text('\xA5' + price_commission);
       $('#profit').text('\xA5' + price_profit);
 
@@ -13,7 +13,7 @@ $(function(){
 
       $('#commission').text('-');
       $('#profit').text('-');
-      
+
     }
   });
 });

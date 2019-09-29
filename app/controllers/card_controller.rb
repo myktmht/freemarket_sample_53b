@@ -1,5 +1,5 @@
 class CardController < ApplicationController
-
+  
   require "payjp"
 
   def paying
@@ -32,8 +32,7 @@ class CardController < ApplicationController
 
   def delete
     card = current_user.cards.first
-    if card.blank?
-    else
+    if card.present?
       Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)
       customer.delete

@@ -1,7 +1,7 @@
 .item-list
   .item-list__name
     %h3 #{items[0].category.name}新着アイテム
-    %a{ href: "#" } もっと見る
+    = link_to "もっと見る", "#"
   .item-list__box
     .item-list__box-show
       - items.each do |item|

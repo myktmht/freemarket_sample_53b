@@ -1,21 +1,54 @@
-.registration__container
-  .registration__title 支払い方法
-  %form.registration__content
-    .registration__content__box
-      =render 'render/input-form-required',label:'カード番号',example:'半角数字のみ'
-      = image_tag 'credit_card.jpg'
-      .month-form-box
-        %label 有効期限
-        %span.required 必須
-        .select_wrap
-          = date_select(:test, :test, use_month_numbers:true, discard_year:true, discard_day:true)
-          %i.fa.fa-chevron-down
-        %h2 月
-        .select_wrap
-          = date_select(:test1, :test1, discard_month:true,start_year:2019)
-          %i.fa.fa-chevron-down
-        %h2 年 
-      =render 'render/input-form-required',label:'セキュリティコード',example:'カード背面４桁もしくは３桁の番号'
-      =render 'render/help-link',text:'カード裏面の番号とは？',address:root_path
-      =render 'render/input-form-button',name:'次へ進む'
-=render "shared/single-footer"
+.container
+  .content-side-bar
+  .content
+    .content__chapter1
+      %h2.content__chapter1__head
+        クレジットカード情報入力
+      = form_with url: pay_card_index_path, method: :post, id: 'charge-form', class: 'card-form', html: { name: "inputForm" } do |f|
+        .card-form__input
+        .card-form__box
+          .form-number
+            %label.form-number__payment カード番号
+            %span.form-number__require 必須
+            = f.text_field :card_number, type: 'text', class: 'form-number__input', placeholder: '半角数字のみ', maxlength: "16", id: "card_number"
+            %ul.form-number__error-text
+            %ul.form-number__card-list
+              %li.form-number__card-list__visa
+                = image_tag"visa.svg",class:"form-number__card-list__visa"
+              %li.form-number__card-list__master
+                = image_tag"/images/master.svg",class:"form-number__card-list__master"
+              %li.form-number__card-list__saison
+                = image_tag"/images/saison.svg",class:"form-number__card-list__saison"
+              %li.form-number__card-list__jcb
+                = image_tag"/images/jcb.svg",class:"form-number__card-list__jcb"
+              %li.form-number__card-list__american
+                = image_tag"/images/american.svg",class:"form-number__card-list__american"
+              %li.form-number__card-list__dainers
+                = image_tag"/images/diners.svg",class:"form-number__card-list__dainers"
+              %li.form-number__card-list__discover
+                = image_tag"/images/discover.svg",class:"form-number__card-list__discover"
+          .form-signup
+            = f.label :有効期限, class: 'form-signup__expire'
+            %span.form-signup__require 必須
+            %br
+            .form-signup__month
+              = f.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{} , class: 'form-signup__month__select', id: "exp_month"
+              %i.form-signup__month__icon.fa.fa-chevron-down
+            %span.form-signup__str 月
+            %br
+            .form-signup__year
+              = f.select :exp_year, [["19",2019],["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{} , class: 'form-signup__month__select', id: "exp_year"
+              %i.form-signup__month__icon.fa.fa-chevron-down
+            %span.form-signup__str 年
+          .form-security
+            = f.label :セキュリティコード, class: 'form-security__expire'
+            %span.form-security__require 必須
+            = f.text_field :cvc, type: 'text', class: 'form-security__input', placeholder: 'カード背面4桁もしくは3桁の番号', maxlength: "4", id: "cvc"
+            %ul.form-security__error-message
+            .form-security__info 
+              %span.form-security__info__question ?
+              カード裏面の番号とは？
+          .btn-default#card_token
+            = f.submit '追加する', class: 'form-btn', id: 'token_submit'
+
+

@@ -140,3 +140,6 @@
     }
   }
 }
+.item-list:not(:first-child) {
+  margin-top: 60px;
+}

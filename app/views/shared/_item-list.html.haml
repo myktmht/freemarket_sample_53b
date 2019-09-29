@@ -1,87 +1,15 @@
 .item-list
   .item-list__name
-    %h3 商品一覧
-    = link_to "#" do
-      もっと見る
+    %h3 #{items[0].category.name}新着アイテム
+    = link_to "もっと見る", "#"
   .item-list__box
     .item-list__box-show
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
-      .visibility
-        = link_to "#" do
-          %figure
-            %figcaption.name
-              %span Mila Owen ワンピース
-            .price
-              %span ¥7,000
-              = image_tag "https://static.mercdn.net/thumb/photos/m75892442047_1.jpg?1567004215"
+      - items.each do |item|
+        .visibility
+          = link_to "#" do
+            %figure
+              %figcaption.name
+                %span #{item.name}
+              .price
+                %span ¥#{item.price.to_s(:delimited)}
+                = image_tag item.images[0].name 

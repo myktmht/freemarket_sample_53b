@@ -2,7 +2,9 @@ Rails.application.routes.draw do
     devise_for :users
     
     resources :users, only: [:show]
-    resources :items, only: [:new, :create, :show]
+    resources :items, only: [:new, :create, :show] do
+      resources :imqages, only:[:index, :create]
+    end
     resources :card, only: [:new]
     resources :mypage_card, only: [:index, :new]
   

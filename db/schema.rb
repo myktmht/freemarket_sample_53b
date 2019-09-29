@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_09_29_060415) do
 
   create_table "cards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -30,33 +29,33 @@ ActiveRecord::Schema.define(version: 2019_09_29_060415) do
     t.datetime "deleted_at"
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",       null: false
-    t.integer  "item_id",    null: false
+  create_table "images", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
-    t.index ["item_id"], name: "index_images_on_item_id", using: :btree
+    t.index ["item_id"], name: "index_images_on_item_id"
   end
 
-  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                                           null: false
-    t.integer  "price",                                          null: false
-    t.text     "description",          limit: 65535,             null: false
-    t.integer  "condition",                                      null: false
-    t.integer  "shipping_fee",                                   null: false
-    t.integer  "shipping_from"
-    t.integer  "days_before_shipping",                           null: false
-    t.integer  "shipping_method",                                null: false
-    t.integer  "trade_status",                       default: 0
-    t.integer  "category_id",                                    null: false
-    t.integer  "user_id",                                        null: false
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+  create_table "items", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "description", null: false
+    t.integer "condition", null: false
+    t.integer "shipping_fee", null: false
+    t.integer "shipping_from"
+    t.integer "days_before_shipping", null: false
+    t.integer "shipping_method", null: false
+    t.integer "trade_status", default: 0
+    t.integer "category_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.datetime "deleted_at"
-    t.index ["category_id"], name: "index_items_on_category_id", using: :btree
-    t.index ["name"], name: "index_items_on_name", using: :btree
-    t.index ["user_id"], name: "index_items_on_user_id", using: :btree
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["name"], name: "index_items_on_name"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

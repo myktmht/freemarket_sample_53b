@@ -1,0 +1,23 @@
+= render "shared/single-header"
+
+%main.single-main
+  %section.single-main__container
+    .single-main__container__top
+      .single-main__container__top__red 発送をお待ちください
+      .single-main__container__top__black 出品者からの発送通知をお待ちください
+    %h2.single-main__container__header 購入完了しました
+    .single-main__container__inner
+      .section-buy
+        .section-buy__main
+          .section-buy__main__content-item
+            .section-buy__main__content-item__photo
+              = image_tag '/images/purchase-test.jpg', size: "128×128", alt: "商品写真", class:"item-photo"
+            .item__name
+              アイテム名
+    .price-fee-box
+      .price-fee-box__price
+        ¥ 724
+        .price-fee-box__shipping-fee
+          送料込み
+
+= render "shared/single-footer"

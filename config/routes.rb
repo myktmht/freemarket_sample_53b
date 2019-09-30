@@ -10,6 +10,14 @@ Rails.application.routes.draw do
         post 'delete', to: 'card#delete'
       end
     end
+    resources :purchase, only: [:index] do
+      collection do
+        get 'show',  to: 'purchase#show'
+        get 'index', to: 'purchase#index'
+        post 'pay',  to: 'purchase#pay'
+        get 'done',  to: 'purchase#done'
+      end
+    end
     resources :items, only: [:new, :create, :show]
     #resources :mypage_card, only: [:index, :new]
   

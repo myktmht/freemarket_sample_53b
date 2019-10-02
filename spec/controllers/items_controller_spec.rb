@@ -5,7 +5,7 @@ describe ItemsController do
   describe 'GET #index' do
 
     before do
-      @ladius = Category.create(id: 1 ,name: "レディース")
+      @ladies = Category.create(id: 1 ,name: "レディース")
       @men = Category.create(id: 199 ,name: "メンズ")
       @camera = Category.create(id: 892 ,name: "カメラ")
       @hoby = Category.create(id: 679 ,name: "ホビー")

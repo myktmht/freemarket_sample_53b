@@ -171,3 +171,59 @@
     }
   }
 }
+.single-container {
+
+}
+.single-main {
+ display: block;
+ &__container {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    &__top {
+      background-color: rgb(247, 239, 207);
+      text-align: center;
+      padding: 30px 16px;
+      line-height: 2;
+      &__red {
+          font-weight: bold;
+          color: rgb(180, 21, 21);
+          font-size: 20px;
+      }
+    }
+    &__header {
+      border-top: 1px solid $color-white; 
+      font-weight: bold;
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5;
+      margin: 0px;
+      text-align: center;
+    }
+    &__inner {
+      text-align: center;
+      border-top: 1px solid $color-white;
+      padding: 64px;
+    }
+ }
+}
+.item__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.price-fee-box {
+  border-top: 1px solid $color-white;
+  &__price {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  &__shipping-fee {
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 10px;
+  }
+}

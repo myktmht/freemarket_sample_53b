@@ -7,6 +7,13 @@ CSV.foreach('db/csv/category.csv', headers: true) do |row|
   )
 end
 
+# user一覧
+user_id = 1
+while user_id <= 10
+  test_user = User.create!(nickname: "test#{user_id}", email: "test#{user_id}@gmail.com", password: '12345678', password_confirmation: '12345678', profile_id: user_id)
+  user_id += 1
+end
+
 # item一覧
 item_id = 1
 # ユーザー「test1」がレディースカテゴリのアイテムを3つ作成

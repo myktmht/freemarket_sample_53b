@@ -15,6 +15,7 @@ class CardController < ApplicationController
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
+      p Payjp.api_key
       customer = Payjp::Customer.create(
       description: '登録テスト',
       email: current_user.email,

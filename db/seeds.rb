@@ -10,7 +10,7 @@ end
 # user一覧
 user_id = 1
 while user_id <= 10
-  test_user = User.create!(nickname: "test#{user_id}", email: "test#{user_id}@gmail.com", password: '12345678', password_confirmation: '12345678').first_or_create
+  test_user = User.create!(nickname: "test#{user_id}", email: "test#{user_id}@gmail.com", password: '12345678', password_confirmation: '12345678')
   user_id += 1
 end
 

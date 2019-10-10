@@ -10,10 +10,10 @@
             %h3 出品画像
             %span 必須
             %p 最大10枚までアップロードできます
-            .sell-content__images-area
-              = f.label :images do
-                = fa_icon 'camera'
-                = f.file_field :images, class: "hidden", multiple: true
+            #sell-images-area
+              .sell-content__image
+                = f.fields_for :image do |img|
+                  = img.file_field :filename
         .sell-content
           = f.label :name, "商品名"
           %span 必須
@@ -30,8 +30,14 @@
               = f.label :category_id, "カテゴリー"
               %span 必須
             .sell-selector
-              = f.collection_select :category_id, @category1, :parent_id, :name, {include_blank: "---"}, class: "select-default"
+              = f.collection_select :category_id, @category0, :parent_id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
+            -# .sell-selector
+            -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
+            -# .sell-selector
+            -#   = f.collection_select :category_id, @category2, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :condition, "商品の状態"
               %span 必須
@@ -48,6 +54,12 @@
               %span 必須 
               .sell-selector  
                 = f.select :shipping_fee, [["送料込み(出品者負担)", 1],["着払い(購入者負担)", 2]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :shipping_method, "発送の方法"
+              %span 必須
+              .sell-selector
+                = f.select :shipping_method, [["未定", 1],["クロネコヤマト", 2],["ゆうパック", 3],["ゆうメール", 4]], {include_blank: "---"}, class: "select-default"
                 %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :shipping_from, "発送元の地域"

@@ -30,7 +30,7 @@
               = f.label :category_id, "カテゴリー"
               %span 必須
             .sell-selector
-              = f.collection_select :category_id, @category0, :parent_id, :name, {include_blank: "---"}, class: "select-default"
+              = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
             -# .sell-selector
             -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"

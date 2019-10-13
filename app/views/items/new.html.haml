@@ -32,12 +32,6 @@
             .sell-selector
               = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
-            -# .sell-selector
-            -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
-            -#   %i.fa.fa-chevron-down.select-default-arrow
-            -# .sell-selector
-            -#   = f.collection_select :category_id, @category2, :id, :name, {include_blank: "---"}, class: "select-default"
-            -#   %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :condition, "商品の状態"
               %span 必須
@@ -103,5 +97,4 @@
           %P また、出品をもちまして#{seller_terms}に同意したことになります。
           = f.submit '出品する', class: "submit-btn"
           = link_to 'もどる', :back, class:"back-btn"
-          -# %a.back-btn もどる
 = render "shared/single-footer"

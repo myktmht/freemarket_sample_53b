@@ -16,6 +16,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @other_item = Item.find(@item.user_id)
+    @whole_items =Item.where(user_id: @other_item).order('id DESC').limit(9)
   end
   
   private

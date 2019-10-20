@@ -13,19 +13,19 @@
             %div
               出品数
               %span.bold 0
+      -# タブ
       %section.mypage-tab-container-notification-todo
-        %ul.mypage-tabs
-          %li.active
+        %ul.mypage-tabs.tab-group
+          %li.tab.is-active
             %h3
-              %a{"data-toggle": "tab", href: "#mypage-tab-notification"}
-                お知らせ
-                %span.mypage-nav-number.hidden-large
-                  
-          %li
+              -# %a{"data-toggle": "tab", href: "#mypage-tab-notification"}              
+              %a お知らせ
+          %li.tab
             %h3
-              %a{"data-toggle": "tab", href: "#mypage-tab-todo"}
-                やることリスト
-        .tab-content
+              -# %a{"data-toggle": "tab", href: "#mypage-tab-todo"}
+              %a やることリスト
+        -# 1つ目のタブの中身
+        .tab-content.panel.is-show
           %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
             %li
               %a.mypage-item-link{"data-modal": "banner", "data-open": "modal", href: ""}
@@ -88,27 +88,34 @@
                     %span 11 日前
                 %i.icon-arrow-right
                   = fa_icon 'angle-right'
-
-            %li.mypage-go-list
-              %a{href: "/jp/mypage/notification/"} 一覧を見る
+          %li.mypage-go-list
+            %a{href: "/jp/mypage/notification/"} 一覧を見る
+        -# 2つ目のタブの中身
+        .tab-content.panel
           %ul#mypage-tab-todo.mypage-item-list.tab-pane
             %li.mypage-item-not-found.bold 現在、やることリストはありません
+
       %section.mypage-tab-container
         %h2.mypage-tab-head 購入した商品
-        %ul.mypage-tabs
-          %li.active
+        %ul.mypage-tabs.tab-group2
+          %li.tab2.is-active2
             %h3
-              %a{"data-toggle": "tab", href: "#mypage-tab-transaction-now"}
+              -# {"data-toggle": "tab", href: "#mypage-tab-transaction-now"}
+              %a
                 取引中
-          %li
+          %li.tab2
             %h3
-              %a{"data-toggle": "tab", href: "#mypage-tab-transaction-old"}
+              -# {"data-toggle": "tab", href: "#mypage-tab-transaction-old"}
+              %a
                 過去の取引
-        .tab-content
-          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+        .tab-content.panel2.is-show2
+          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane2
             %li.mypage-item-not-found.bold 取引中の商品がありません
-          %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
+
+        .tab-content.panel2
+          %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane2
             %li.mypage-item-not-found.bold 過去に取引した商品がありません
+            
     .l-side
       %nav.mypage-nav
         %ul.mypage-nav-list

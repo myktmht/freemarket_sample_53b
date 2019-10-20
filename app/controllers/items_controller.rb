@@ -8,6 +8,14 @@ class ItemsController < ApplicationController
   def new    
     redirect_to new_user_session_url unless user_signed_in?
 
+  def index
+    @ladyitems = get_items(1)
+    @manitems = get_items(199)
+    @cameraitems = get_items(892)
+    @hobyitems = get_items(679)
+  end
+
+  def new
     @item = Item.new
     10.times { @item.images.build }
 
@@ -39,5 +47,10 @@ class ItemsController < ApplicationController
 
   def set_image
     @images = Image.where(params[:item_id])
+  end
+
+  def get_items(id)
+    category = Category.find(id)
+    items = Item.where(category_id: category).order('id DESC').limit(10)
   end
 end

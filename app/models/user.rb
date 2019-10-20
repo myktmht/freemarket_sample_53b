@@ -2,6 +2,8 @@ class User < ApplicationRecord
     has_many :items  
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable
+   has_many :cards
+   has_one :profile
   
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :nickname, presence: true

@@ -32,7 +32,7 @@
             .sell-selector#category0
               = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
-            -# 以下は仮おき。カテゴリーの絞り込みはJSを経由する必要がある。
+            -# 以下は仮おき。カテゴリーの絞り込みはJSを経由する。
             -# .sell-selector#category1
             -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
             -#   %i.fa.fa-chevron-down.select-default-arrow

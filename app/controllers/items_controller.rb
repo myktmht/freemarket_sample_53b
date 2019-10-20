@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
     10.times { @item.images.build }
 
     @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)
-    # 以下は仮おき。カテゴリーの絞り込みはJSを経由する必要がある。
+    # 以下は仮おき。カテゴリーの絞り込みはJSを経由する。
     # @category1 = Category.where(parent_id: @category0.ids)
     # @category2 = Category.where(parent_id: @category1.ids)
   end
@@ -21,10 +21,6 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     binding.pry
     if @item.save
-      # params[:image]['filename'].each do |i|
-      #   binding.pry
-      #   @images = @item.images.create!(filename: i)
-      # end
       redirect_to root_path
     else
       render :new
@@ -45,8 +41,4 @@ class ItemsController < ApplicationController
   def set_image
     @images = Image.where(params[:item_id])
   end
-
-  # def create_params
-  #   params.require(:item).permit(images_attributes: [:image])
-  # end
 end

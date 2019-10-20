@@ -12,8 +12,8 @@
             %p 最大10枚までアップロードできます
             #sell-images-area
               .sell-content__image
-                = f.fields_for :image do |img|
-                  = img.file_field :filename
+                = f.fields_for :images do |image|
+                  = image.file_field :image
         .sell-content
           = f.label :name, "商品名"
           %span 必須
@@ -26,12 +26,19 @@
           .sell-content__sub-head 
             %h3 商品の詳細
           .sell-content__groups
-            .sell-content__group
+            .sell-content__group#sell-content-category
               = f.label :category_id, "カテゴリー"
               %span 必須
-            .sell-selector
+            .sell-selector#category0
               = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
+            -# 以下は仮おき。カテゴリーの絞り込みはJSを経由する必要がある。
+            -# .sell-selector#category1
+            -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
+            -# .sell-selector#category2
+            -#   = f.collection_select :category_id, @category2, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :condition, "商品の状態"
               %span 必須

@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
 
   def new    
     redirect_to new_user_session_url unless user_signed_in?
+  end
 
   def index
     @ladyitems = get_items(1)

@@ -13,7 +13,7 @@
             #sell-images-area
               .sell-content__image
                 = f.fields_for :images do |image|
-                  = image.file_field :image
+                  = image.file_field :name
         .sell-content
           = f.label :name, "商品名"
           %span 必須

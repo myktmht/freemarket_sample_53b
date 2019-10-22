@@ -70,6 +70,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def create_params
-      params.require(:image).permit(:image, :item_id).merge(item_id: params[:item_id])
+      params.require(:image).permit(:name, :item_id).merge(item_id: params[:item_id])
     end
 end

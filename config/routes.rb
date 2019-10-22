@@ -2,9 +2,12 @@ Rails.application.routes.draw do
     devise_for :users
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root "items#index"
-    get "users/identification", to: "users#identification", as: "identification"
-    
-    resources :users, only: [:show]
+
+    resources :users, only: [:show] do
+      collection do
+        get 'identification', to: 'users#identification'
+      end
+    end
     resources :items, only: [:index, :new, :create, :show]
     resources :card, only: [:new, :show] do
       collection do

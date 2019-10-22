@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
-  before_action :authenticate_user!, only: [:logout]
+  before_action :redirect_root, only: :logout
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
@@ -23,6 +23,12 @@ class Users::SessionsController < Devise::SessionsController
     super
   end
 
+
+  private
+
+  def redirect_root
+    redirect_to root_path unless user_signed_in?
+  end
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.

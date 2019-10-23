@@ -3,6 +3,9 @@ class CardController < ApplicationController
   require "payjp"
 
   def paying
+    # 以下、パンくずリスト用の定義。ユーザーにカードの登録が結びついたときに使う。
+    # @card = Card.find_by(id: params[:id])
+    # @user = User.find_by(id: @card.user_id)
   end
 
   def new

@@ -83,3 +83,4 @@ gem 'dotenv-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_hash'
 gem 'paranoia'
+gem 'gretel'

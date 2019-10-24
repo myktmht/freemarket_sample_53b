@@ -1,0 +1,9 @@
+= render partial: 'shared/header'
+// ここにパンくずが入る予定
+.logout
+  .logout-main
+    .lside
+      // ここにサイドバーが入る予定
+    .logout-main__content
+      .logout-main__content-btn
+        = link_to "ログアウト", logout_path, method: :delete, class: "btn-red"

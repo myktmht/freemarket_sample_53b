@@ -20,8 +20,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items, only: [:index, :new, :create, :show]
-
+  resources :items, only: [:index, :new, :create, :show] do
+    resources :images, only:[:index, :create]
+  end
+    
   resources :card, only: [:new, :show] do
     collection do
       get "paying"

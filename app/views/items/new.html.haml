@@ -4,14 +4,16 @@
     %h2.sell-container__title 商品の情報を入力
     .sell-contents
       = form_for @item do |f|
-        = f.hidden_field :user_id, value: "#{@item.user_id}"
+        = f.hidden_field :user_id, value: "#{current_user.id}"
         .sell-content
           .sell-content__images
             %h3 出品画像
             %span 必須
             %p 最大10枚までアップロードできます
-            .sell-content__images-area
-              %i.fa.fa-camera
+            #sell-images-area
+              .sell-content__image
+                = f.fields_for :images do |image|
+                  = image.file_field :name
         .sell-content
           = f.label :name, "商品名"
           %span 必須
@@ -24,12 +26,19 @@
           .sell-content__sub-head 
             %h3 商品の詳細
           .sell-content__groups
-            .sell-content__group
+            .sell-content__group#sell-content-category
               = f.label :category_id, "カテゴリー"
               %span 必須
-            .sell-selector
-              = f.collection_select :category_id, @category1, :parent_id, :name, {include_blank: "---"}, class: "select-default"
+            .sell-selector#category0
+              = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
               %i.fa.fa-chevron-down.select-default-arrow
+            -# 以下は仮おき。カテゴリーの絞り込みはJSを経由する。
+            -# .sell-selector#category1
+            -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
+            -# .sell-selector#category2
+            -#   = f.collection_select :category_id, @category2, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :condition, "商品の状態"
               %span 必須
@@ -46,6 +55,12 @@
               %span 必須 
               .sell-selector  
                 = f.select :shipping_fee, [["送料込み(出品者負担)", 1],["着払い(購入者負担)", 2]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :shipping_method, "発送の方法"
+              %span 必須
+              .sell-selector
+                = f.select :shipping_method, [["未定", 1],["クロネコヤマト", 2],["ゆうパック", 3],["ゆうメール", 4]], {include_blank: "---"}, class: "select-default"
                 %i.fa.fa-chevron-down.select-default-arrow
             .sell-content__group.sell-content__margin
               = f.label :shipping_from, "発送元の地域"
@@ -73,12 +88,12 @@
                   .li-right__input
                     %a &#165;
                     = f.text_field :price, placeholder: "例）300", class: "li-right__input-default"
-              %li.fee
+              %li.commission
                 .li-left 販売手数料(10%)
-                .li-right &#045;
-              %li.benefit
+                .li-right#commission &#045;
+              %li.profit
                 .li-left 販売利益
-                .li-right &#045;
+                .li-right#profit &#045;
         .sell-content__submit
           - prohibited_items = link_to "禁止されている出品","#", target: :_blank
           - prohibited_conduct = link_to "行為","#", target: :_blank
@@ -88,5 +103,5 @@
           %P またブランド品でシリアルナンバー等がある場合はご記載ください。#{counterfeit_goods}は犯罪であり処罰される可能性があります。
           %P また、出品をもちまして#{seller_terms}に同意したことになります。
           = f.submit '出品する', class: "submit-btn"
-          %a.back-btn もどる
+          = link_to 'もどる', :back, class:"back-btn"
 = render "shared/single-footer"

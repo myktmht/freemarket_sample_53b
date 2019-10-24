@@ -18,10 +18,13 @@
 @import "modules/app-baner";
 @import "modules/top-footer";
 
-// user_signup_scss
+// user_sign_in_scss
 @import "modules/users-sign_in";
 @import "modules/single-header";
 @import "modules/single-footer";
+
+// logout_scss
+@import "modules/logout";
 
 @import "modules/items-new";
 //@import "common_layout/form";

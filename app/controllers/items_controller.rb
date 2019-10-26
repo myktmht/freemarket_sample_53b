@@ -34,8 +34,8 @@ class ItemsController < ApplicationController
   def show
   end
 
-  def set_search
-    @q = Itam.ransack(search_params)
+  def search
+    # @q = Item.ransack(search_params)
     @items = @q.result(distinct: true)
   end
   
@@ -57,10 +57,10 @@ class ItemsController < ApplicationController
   end
 
   def search_params
-    params.require(:q).parmit(:name_cont)
+    params.require(:q).permit(:name_cont)
   end
 
   def set_search
-    @q = Itam.search(params[:q])
+    @q = Item.search(params[:q])
   end
 end

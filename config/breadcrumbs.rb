@@ -13,10 +13,16 @@ end
 #   link "マイページ", user_path(user)
 # end
 
+# マイページ>本人情報の確認
+crumb :identification do
+  link "本人情報の登録", identification_users_path
+  # parent :mypage
+end
+
 # # マイページ>ログアウト
 # crumb :logout do
 #   link "ログアウト", logout_path
-#   parent :mypage
+#   # parent :mypage
 # end
 
 # # マイページ>お知らせ

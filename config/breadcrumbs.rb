@@ -13,11 +13,11 @@ end
 #   link "マイページ", user_path(user)
 # end
 
-# マイページ>ログアウト
-crumb :logout do
-  link "ログアウト", logout_path
-  parent :mypage
-end
+# # マイページ>ログアウト
+# crumb :logout do
+#   link "ログアウト", logout_path
+#   parent :mypage
+# end
 
 # # マイページ>お知らせ
 # crumb :notification do
@@ -37,11 +37,11 @@ end
 #   parent :mypage
 # end
 
-# # マイページ>支払い方法
-# crumb :purchase do
-#   link "支払い方法", purchase_index_path
-#   parent :mypage
-# end
+# マイページ>支払い方法 ※マイページ完成次第、下のコメントアウトを外す。
+crumb :paying do
+  link "支払い方法", paying_card_index_path
+  # parent :mypage
+end
 
 # # カテゴリー一覧
 # clumb :category do

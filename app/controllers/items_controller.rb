@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_image
-  before_action :set_search
+  # before_action :set_search
 
   def index
     @q = Item.ransack(params[:q])
@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    # @q = Item.ransack(search_params)
+    @q = Item.ransack(params[:q])
     @items = @q.result(distinct: true)
   end
   
@@ -56,9 +56,9 @@ class ItemsController < ApplicationController
     items = Item.where(category_id: category).order('id DESC').limit(10)
   end
 
-  def search_params
-    params.require(:q).permit(:name_cont)
-  end
+  #def search_params
+    #params.require(:q).permit(:name_cont)
+  #end
 
   def set_search
     @q = Item.search(params[:q])

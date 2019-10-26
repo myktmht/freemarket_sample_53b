@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index, :new, :create, :show] do
     resources :images, only:[:index, :create]
+    collection do
+      get 'search', to: 'items#search'
+    end
   end
     
   resources :card, only: [:new, :show] do

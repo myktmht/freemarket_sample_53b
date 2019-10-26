@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    # users>application_controllerを継承しています。
+
       # def index
       # end
     

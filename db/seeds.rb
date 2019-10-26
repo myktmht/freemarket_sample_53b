@@ -7,10 +7,11 @@ CSV.foreach('db/csv/category.csv', headers: true) do |row|
   )
 end
 
-# user一覧
+# user一覧、profile一覧
 user_id = 1
 while user_id <= 10
   test_user = User.create!(nickname: "test#{user_id}", email: "test#{user_id}@gmail.com", password: '12345678', password_confirmation: '12345678')
+  test_profile = Profile.create!(body: "よろしく！", last_name: "てすと#{user_id}", first_name: "太郎#{user_id}", last_name_kana: "テスト#{user_id}", first_name_kana: "タロウ#{user_id}", birth_year: 2000, birth_month: 1, birth_day: 1, phone_number: 123456789, user_id: user_id)
   user_id += 1
 end
 

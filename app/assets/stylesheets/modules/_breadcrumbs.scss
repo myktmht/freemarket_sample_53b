@@ -1,0 +1,27 @@
+.breadcrumbs {
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #eee;
+  background-color: white;
+  font-size: 14px;
+  box-shadow: 0 3px 3px 0  rgba(0, 0, 0, 0.15); 
+  position: relative;
+  z-index: 2;
+  &-list {
+    padding: 16px 0;
+    margin: 0 162px;
+    overflow: auto;
+    white-space: nowrap;
+    i {
+      font-weight: 1000;
+      color: gray;
+      display: inline-block;
+      margin: 0 8px;
+    }
+    li {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+}

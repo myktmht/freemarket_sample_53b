@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
   before_action :set_image
+  before_action :set_search
 
   def index
+    @q = Item.ransack(params[:q])
+    @items = @q.result(distinct: true)
     @ladyitems = get_items(1)
     @manitems = get_items(199)
     @cameraitems = get_items(892)
@@ -30,6 +33,11 @@ class ItemsController < ApplicationController
 
   def show
   end
+
+  def set_search
+    @q = Itam.ransack(search_params)
+    @items = @q.result(distinct: true)
+  end
   
   private
 
@@ -46,5 +54,13 @@ class ItemsController < ApplicationController
   def get_items(id)
     category = Category.find(id)
     items = Item.where(category_id: category).order('id DESC').limit(10)
+  end
+
+  def search_params
+    params.require(:q).parmit(:name_cont)
+  end
+
+  def set_search
+    @q = Itam.search(params[:q])
   end
 end

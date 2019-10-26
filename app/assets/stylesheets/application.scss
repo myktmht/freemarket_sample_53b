@@ -1,3 +1,8 @@
+/*
+*= require dropzone/basic
+*= require dropzone/dropzone
+*/
+
 @import "./_reset";
 @import "font-awesome";
 @import "mixins/mixin";
@@ -16,10 +21,13 @@
 // subpage_scss
 @import "modules/breadcrumbs";
 
-// user_signup_scss
+// user_sign_in_scss
 @import "modules/users-sign_in";
 @import "modules/single-header";
 @import "modules/single-footer";
+
+// logout_scss
+@import "modules/logout";
 
 @import "modules/items-new";
 //@import "common_layout/form";
@@ -27,4 +35,5 @@
 //@import "mypage_card";
 @import "./cards";
 @import "./_buy";
+@import "./user-profile-edit-page";
 @import "./_identification"

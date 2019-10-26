@@ -1,0 +1,40 @@
+.logout {
+  box-sizing: border-box;
+  background-color: $color-white;
+  &-main{
+    margin: 0 auto;
+    height: 1400px;
+    width: 1020px;
+    .lside {
+      float: left;
+      width: 280px;
+      margin: 40px 40px 0 0;
+      // サイドバー可視化のための仮おき
+      height: 900px;
+      background-color: gray;
+    }
+    &__content {
+      margin: 40px 0 auto;
+      float: left;
+      height: 100%;
+      width: calc(100%-280px);
+      &-btn {
+        width: 700px;
+        padding: 64px 0 64px 0;
+        background-color: white;
+        .btn-red{
+          margin: 0 auto;
+          background-color: $color-red;
+          border: solid 1px $color-red;
+          color: white;
+          display: block;
+          width: 320px;
+          line-height: 48px;
+          font-size: 14px;
+          cursor: pointer;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

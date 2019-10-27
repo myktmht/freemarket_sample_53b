@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    # users>application_controllerを継承しています。
+
       # def index
       # end
     
@@ -16,6 +16,9 @@ class UsersController < ApplicationController
       #   #   render :edit
       #   # end
       # end
+
+      def identification
+      end
       
       # private
     

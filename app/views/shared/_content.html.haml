@@ -17,7 +17,14 @@
             = link_to "#" do
               おもちゃ・ホビー・グッズ
     .item
-      = render partial: 'shared/item-list'
+      - if @ladyitems.present?
+        = render partial: 'shared/item-list', locals: {items: @ladyitems}
+      - if @manitems.present?
+        = render partial: 'shared/item-list', locals: {items: @manitems}
+      - if @cameraitems.present?
+        = render partial: 'shared/item-list', locals: {items: @cameraitems}
+      - if @hobyitems.present?
+        = render partial: 'shared/item-list', locals: {items: @hobyitems}
     .tag.brand
       %h2 人気のブランド
       .tag-list

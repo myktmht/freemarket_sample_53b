@@ -8,14 +8,15 @@
 |nickname|string|null: false, unique: true, index: true|
 |email|string|null: false, unique;: true|
 |password|string|---|
+|item_id|references|foreign_key: true|
 
 ### Association
 * has_many :comments
 * has_many :items
 * has_many :likes
 * has_many :sns_credentials
-* has_many :trading_partners
-* has_one :credit_card
+* has_many :reviews
+* has_one :card
 * has_one :profile
 * has_one :address
 
@@ -52,15 +53,13 @@
 * belongs_to :user
 
 
-## credit_cardsテーブル
+## cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|authorization_code|integer|null: false, unique: true|
-|security_code|integer|null: false|
-|month|integer|null: false|
-|year|integer|null :false|
-|user_id|references|null: false, index: true, foreign_key: true|
+|user_id|references|foreign_key: true|
+|customer_id|references|foreign_key: true|
+|card_id|references|foreign_key: true|
 
 ### Association
 * belongs_to :user
@@ -127,7 +126,6 @@
 * has_many :contents
 * has_many :images
 * has_many :likes
-* has_one :order
 
 ## brandsテーブル
 
@@ -195,37 +193,13 @@
 * belongs_to :category
 * belongs_to :size
 
-## trading_partnersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|buyer_id|references|null: false, index: true, foreign_key: { to_table: :users }|
-|seller_id|references|null: false, index: true, foreign_key: { to_table: :users }|
-
-### Association
-* belongs_to :buyer_id, class_name: "User"
-* belongs_to :seller_id, class_name: "User"
-* has_many :order
-* has_many :reviews
-
 ## reviewsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |body|text|---|
 |value|integer|null: false|
-|trading_pertner_id|references|null: false, index: true, foreign_key: true|
+|user_id|references|null: false, index: true, foreign_key: true|
 
 ### Association
-* belongs_to :trading_partner
-
-## ordersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|status|integer|null: false|
-|item_id|references|null: false, index: true, foreign_key: true|
-|trading_partner_id|references|null: false, index: true, foreign_key: true|
-
-### Association
-* belongs_to :item
-* belongs_to :trading_partner
+* belongs_to :user

@@ -28,3 +28,91 @@
     clear: both;
   }
 }
+
+// 1行テキストボックスのデフォルト設定（@include input-default;）
+@mixin input-default {
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  line-height: 1.5em;
+  font-size: 16px;
+  border: 1px solid #ccc; 
+}
+
+// hover時アンダーライン＆opacity一括指定（@include small-link;）
+@mixin small-link {
+  :hover{
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}
+
+@mixin mainWidth($max-width: 700px, $min-width: 500px) {
+  max-width: $max-width;
+  min-width: $min-width;
+}
+
+@mixin border($border-bottom: solid 1px #f5f5f5) {
+  border-bottom: solid 1px #f5f5f5;
+}
+
+@mixin marginCenter($margin-left: auto, $margin-right: auto) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin bold($font-weight: 600) {
+  font-weight: $font-weight;
+}
+
+@mixin boxWidth($width: 314px, $height: 48px) {
+  width: 314px;
+  height: 48px;
+}
+
+@mixin changeIcon($text-align: right, $font-size: 14px, $color: #00bfff){
+  text-align: right;
+  font-size: 14px;
+  color: #00bfff;
+}
+
+@mixin anyBox($background-color: #d3d3d3,
+              $color: #fff,
+              $text-align: center,
+              $height: 18px,
+              $width: 33px,
+              $display: inline-block,
+              $border-radius: 2px,
+              $font-size: 12px,
+              $line-height: 16px,
+              $padding-top: 2px,
+              $margin-left: 4px){
+  background-color: #d3d3d3;
+  color: #fff;
+  text-align: center;
+  height: 18px;
+  width: 33px;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 2px;
+  margin-left: 4px;
+}
+
+@mixin formatBox($width: 565px,
+                 $height: 48px,
+                 $border-radius: 6px,
+                 $border: solid 1px #d3d3d3,
+                 $margin-top: 3px,
+                 $margin-bottom: 10px,
+                 $font-size: 16px,
+                 $padding-left: 15px){
+  width: 565px;
+  height: 48px;
+  border-radius: 6px;
+  border: solid 1px #d3d3d3;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 15px;
+} 

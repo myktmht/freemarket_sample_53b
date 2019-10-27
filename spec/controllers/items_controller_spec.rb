@@ -70,10 +70,6 @@ describe ItemsController do
 
   describe 'POST #create'do
     let(:item) { create(:item) }
-    
-    before do
-      @user = FactoryBot.create(:user)
-    end
 
     it 'is valid with colums' do
       item = build(:item)

@@ -4,6 +4,7 @@ class User < ApplicationRecord
            :recoverable, :rememberable, :validatable
     has_many :cards
     has_one :profile
+    has_one :address
   
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :nickname, presence: true

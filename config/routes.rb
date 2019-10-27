@@ -42,20 +42,4 @@ Rails.application.routes.draw do
       get 'done',  to: 'purchase#done'
     end
   end
-
-  resources :signup, only: [:index, :create] do
-    collection do
-      get  'registration'
-      post 'registration',       to: 'signup#first_validation'
-      get  'sms_authentication'
-      post 'sms_authentication', to: 'signup#sms_post'
-      get  'sms_confirmation'
-      get  'sms_confirmation',   to: 'signup#sms_check'
-      get  'address'
-      post 'address',            to: 'signupsecond_validation'
-      get  'card'
-      get  'done'
-    end
-  end
-
 end

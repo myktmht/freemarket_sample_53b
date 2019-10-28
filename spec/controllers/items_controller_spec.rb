@@ -50,96 +50,46 @@ describe ItemsController do
     end
 
     context 'as a gest user' do
-      it "does not respond successfully" do
+      it 'does not respond successfully' do
         get :new
         expect(response).to_not be_successful
       end
 
-      it "returns a 302 status code" do
+      it 'returns a 302 status code' do
         get :new
         expect(response).to have_http_status "302"
       end
 
       # ログイン画面にリダイレクトされているか？
-      it "redirects the page to /login" do
+      it 'redirects the page to /login' do
         get :new
-        expect(response).to redirect_to "/login"
+        expect(response).to redirect_to login_path
       end
     end
   end
 
-  describe 'POST #create'do
-    let(:item) { create(:item) }
+  # describe 'POST #create' do
+  #   let(:item) { create(:item) }
 
-    it 'is valid with colums' do
-      item = build(:item)
-      expect(item).to be_valid
-    end
+  #   before do
+  #     @user = FactoryBot.create(:user)
+  #   end
 
-    it 'is invalid without name' do
-      item = build(:item, name: nil)
-      item.valid?
-      expect(item.errors[:name])
-    end
+  #   context 'when it is valid' do      
 
-    it 'is invalid without price' do
-      item = build(:item, price: nil)
-      item.valid?
-      expect(item.errors[:price])
-    end
+  #     it 'has 302 status code' do
+  #     end
 
-    it 'is invalid without description' do
-      item = build(:item, description: nil)
-      item.valid?
-      expect(item.errors[:description])
-    end
+  #     it 'redirects the page to root' do
+  #       post :create
+  #       expect(response).to redirect_to root_path
+  #     end
+  #   end
 
-    it 'is invalid without condition' do
-      item = build(:item, condition: nil)
-      item.valid?
-      expect(item.errors[:condition])
-    end
-
-    it 'is invalid without shipping_fee' do
-      item = build(:item, shipping_fee: nil)
-      item.valid?
-      expect(item.errors[:shipping_fee])
-    end
-
-    it 'is invalid without shipping_from' do
-      item = build(:item, shipping_from: nil)
-      item.valid?
-      expect(item.errors[:shipping_from])
-    end
-
-    it 'is invalid without days_before_shipping' do
-      item = build(:item, days_before_shipping: nil)
-      item.valid?
-      expect(item.errors[:days_before_shipping])
-    end
-
-    it 'is invalid without shipping_method' do
-      item = build(:item, shipping_method: nil)
-      item.valid?
-      expect(item.errors[:shipping_method])
-    end
-
-    it 'is invalid without trade_status' do
-      item = build(:item, trade_status: nil)
-      item.valid?
-      expect(item.errors[:trade_status])
-    end
-
-    it 'is invalid without user_id' do
-      item = build(:item, user_id: nil)
-      item.valid?
-      expect(item.errors[:user_id])
-    end
-
-    it 'is invalid without category_id' do
-      item = build(:item, category_id: nil)
-      item.valid?
-      expect(item.errors[:category_id])
-    end
-  end
+  #   context '無効な値のとき' do
+  #     it 'has 200 status code' do
+  #       expect(response).to have_no_http_status(:ok)
+  #     end
+  #   end
+  # end
 end

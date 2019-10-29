@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   get '/users/index', to: 'users#index'
   resources :users, only: [:index, :show, :new] do
     collection do
-      #get 'number'
-      #get 'address'
-      #get 'done'
-      #get 'credit'
+      get 'number'
+      get 'address'
+      get 'done'
+      get 'credit'
       get 'identification', to: 'users#identification'
     end
     resources :profiles, only: [:edit]

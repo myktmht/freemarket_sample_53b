@@ -30,6 +30,23 @@ class ItemsController < ApplicationController
 
   def show
   end
+
+  def edit
+    redirect_to new_user_session_url unless user_signed_in?
+    @item = Item.find(params[:id])
+    10.times { @item.images.build }
+
+    @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update!(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
   
   private
 

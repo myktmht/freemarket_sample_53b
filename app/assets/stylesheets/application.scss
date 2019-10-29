@@ -18,6 +18,9 @@
 @import "modules/app-baner";
 @import "modules/top-footer";
 
+// mypage_scss
+@import "modules/mypage";
+
 // subpage_scss
 @import "modules/breadcrumbs";
 
@@ -25,6 +28,9 @@
 @import "modules/users-sign_in";
 @import "modules/single-header";
 @import "modules/single-footer";
+
+// user_sign_up_scss
+@import "users_signup/index";
 
 // logout_scss
 @import "modules/logout";

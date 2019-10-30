@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe PurchaseController do
 
+  # # Errorのため一時的にコメントアウト。別ブランチにて検討。
   # describe "GET #index" do
   #   it "returns http success" do
   #     get :index

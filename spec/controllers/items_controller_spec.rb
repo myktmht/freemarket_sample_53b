@@ -68,6 +68,7 @@ describe ItemsController do
     end
   end
 
+  # # 保留。imageの生成も必要。
   # describe 'POST #create' do
   #   let(:item) { create(:item) }
 

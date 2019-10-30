@@ -1,13 +1,26 @@
 class UsersController < ApplicationController
 
-      # def index
-      # end
+      #def index
+      #end
+
+      def new
+      end
+
     
       def show
       end
-    
-      # def edit
-      # end
+
+      def number
+      end
+
+      def address
+      end
+
+      def credit
+      end
+
+      def done
+      end
     
       # def update
       #   # if current_user.update(user_params)

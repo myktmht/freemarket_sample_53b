@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-
+  # root to: 'home#index'
   devise_scope :user do
     get 'login',      to: 'users/sessions#new'
     post 'login',     to: 'users/sessions#create'
@@ -14,11 +15,16 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "items#index"
 
-  resources :users, only: [:show] do
-    resources :profiles, only: [:edit]
+  get '/users/index', to: 'users#index'
+  resources :users, only: [:index, :show, :new] do
     collection do
+      get 'number'
+      get 'address'
+      get 'done'
+      get 'credit'
       get 'identification', to: 'users#identification'
     end
+    resources :profiles, only: [:edit]
   end
 
   resources :items, only: [:index, :new, :create, :show] do
@@ -42,5 +48,4 @@ Rails.application.routes.draw do
       get 'done',  to: 'purchase#done'
     end
   end
-
 end

@@ -1,0 +1,114 @@
+.guide-beginner
+  .guide-beginner__header
+    = render partial: 'shared/header'
+    - breadcrumb :beginner
+    = render partial: 'render/breadcrumbs'
+  .guide-beginner__main
+    .guide-beginner__title
+      .guide-beginner__title-wrapper
+        .guide-beginner__title-img
+          %h2
+            = image_tag "guide/main-head.svg", size: "592x146", alt: "メルカリ初心者ガイド"
+    .guide-beginner__introduction
+      %h3
+        = image_tag "guide/title-01.svg", alt: "メルカリってなに？"
+      %h4 かんたんに売り買いができて、あんしん・あんぜんなお取引ができるフリマアプリです。
+      %h3
+        = image_tag "guide/title-02.svg", alt: "出品時も購入時も手数料０円"
+      .guide-beginner__introduction__about-fee
+        %p 会員登録、月会費、クレジットカード手数料も一切かかりません。かかるのは商品が売れたときの販売手数料10%だけです。
+        %span ※コンビニ/ATM/キャリア決済は手数料100円
+    .guide-beginner__flow
+      .guide-beginner__flow-seller
+        .guide-beginner__flow-seller__line
+          %h3 売るときの３ステップ
+        %p
+          = image_tag "guide/flow-seller.png", size: "564x252", alt: "売るときの３ステップ"
+      .guide-beginner__flow-buyer
+        .guide-beginner__flow-buyer__line
+          %h3 買うときの３ステップ
+        %p
+          = image_tag "guide/flow-buyer.png", size: "564x252", alt: "買うときの３ステップ"
+    .guide-beginner__usage
+      %ul
+        %li.guide-beginner__usage-seller.inline
+          .guide-beginner__usage-seller__title
+            %h3 売りたい人(出品者)
+          .guide-beginner__usage-seller__image
+            %figure
+              = image_tag "guide/title-seller2.svg"
+        %li.guide-beginner__usage-buyer.inline
+          .guide-beginner__usage-buyer__title
+            %h3 買いたい人(購入者)
+          .guide-beginner__usage-buyer__image
+            %figure
+              = image_tag "guide/title-buyer2.svg"
+      .guide-beginner__list
+        .guide-beginner__list-seller
+          %ul
+            %li
+              .guide-beginner__list-seller__box
+                %h3.subtitle どうやって売るの？
+                %figure
+                  = image_tag "guide/seller-icon1.svg", alt: "どうやって売るの"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-seller__box
+                %h3.subtitle なにが売れるの？
+                %figure
+                  = image_tag "guide/seller-icon2.svg", alt: "なにが売れるの？"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-seller__box
+                %h3.subtitle 配送方法は？
+                %figure
+                  = image_tag "guide/seller-icon3.svg", alt: "配送方法は？"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-seller__box
+                %h3.subtitle トラブルがあったらどうしよう？
+                %figure
+                  = image_tag "guide/seller-icon4.svg", alt: "トラブルがあったらどうしよう？"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-seller__box
+                %h3.subtitle やったらダメなことって？
+                %figure
+                  = image_tag "guide/seller-icon5.svg", alt: "やったらダメなことって？"
+                %p 詳しく見る
+        .guide-beginner__list-buyer
+          %ul
+            %li
+              .guide-beginner__list-buyer__box
+                %h3.subtitle どうやって買うの？
+                %figure
+                  = image_tag "guide/buyer-icon1.svg", alt: "どうやって買うの"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-buyer__box
+                %h3.subtitle 支払いはどうやるの？
+                %figure
+                  = image_tag "guide/buyer-icon2.svg", alt: "支払いはどうやるの？"
+                %p 詳しく見る
+            %li 
+              .guide-beginner__list-buyer__box
+                %h3.subtitle ちゃんと届くの？
+                %figure
+                  = image_tag "guide/buyer-icon3.svg", alt: "ちゃんと届くの？"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-buyer__box
+                %h3.subtitle 住所を知られたくない…
+                %figure
+                  = image_tag "guide/buyer-icon4.svg", alt: "住所を知られたくない…"
+                %p 詳しく見る
+            %li
+              .guide-beginner__list-buyer__box
+                %h3.subtitle トラブルがあったらどうしよう？
+                %figure
+                  = image_tag "guide/buyer-icon5.svg", alt: "トラブルがあったらどうしよう？"
+                %p 詳しく見る
+    .guide-beginner__text
+      %p 上記に載っていない内容でお困りの方や、更に詳細を知りたい方はメルカリガイドをご覧ください。それでもお困りの場合「マイページ＞お問い合わせ」または「サイドメニュー＞お問い合わせ」よりお問い合わせください。
+  .guide-beginner__footer
+    = render partial: 'shared/footer'

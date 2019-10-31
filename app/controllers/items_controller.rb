@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    redirect_to new_user_session_url unless user_signed_in?
+    redirect_to login_url unless user_signed_in?
     @item = Item.new
     10.times { @item.images.build }
 

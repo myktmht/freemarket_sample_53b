@@ -23,7 +23,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :new] do
     collection do
-
       get 'identification', to: 'users#identification'
     end
     resources :profiles, only: [:edit]

@@ -9,10 +9,10 @@
           =link_to signup_registration_path, class: "contents__btn contents__btn__mail" do
             %i.fa.fa-envelope-o
             メールアドレスで登録
-          =link_to "", class: "contents__btn contents__btn__facebook" do
+          =link_to user_facebook_omniauth_authorize_path, class: "contents__btn contents__btn__facebook" do
             %i.fa.fa-facebook-square
             Facebookで登録
-          =link_to "", class: "contents__btn contents__btn__google" do
+          =link_to user_google_omniauth_authorize_path, class: "contents__btn contents__btn__google" do
             = image_tag '/images/google.svg', class: 'contents__btn__google__logo'
             Googleで登録
 

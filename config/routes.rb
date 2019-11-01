@@ -48,4 +48,7 @@ Rails.application.routes.draw do
       get  '/:id/done',  to: 'purchase#done',as:"buy_done"
     end
   end
+
+  get 'guide/beginner', to: 'guide#beginner'
+
 end

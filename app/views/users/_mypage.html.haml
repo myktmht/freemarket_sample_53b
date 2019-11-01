@@ -219,7 +219,7 @@
         %h3.mypage-nav-head 設定	
         %ul.mypage-nav-list	
           %li	
-            = link_to "#",class: "mypage-nav-list-item" do	
+            = link_to "/users/#{current_user.id}/profiles/#{current_user.id}/edit",class: "mypage-nav-list-item" do	
               ="プロフィール"	
               %i.icon-arrow-right	
                 = fa_icon 'angle-right'	

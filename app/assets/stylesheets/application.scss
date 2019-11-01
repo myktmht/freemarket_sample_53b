@@ -30,7 +30,8 @@
 @import "modules/single-footer";
 
 // user_sign_up_scss
-@import "users_signup/index";
+@import "users_signup/signup";
+@import "users_signup/registration";
 
 // logout_scss
 @import "modules/logout";

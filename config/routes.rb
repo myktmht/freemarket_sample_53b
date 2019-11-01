@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     resources :profiles, only: [:edit]
   end
 
-  resources :items, only: [:index, :new, :create, :show] do
+  resources :items, only: [:index, :new, :create, :show, :edit, :update] do
     resources :images, only:[:index, :create]
   end
     

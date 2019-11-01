@@ -2,7 +2,7 @@
   .header-inner
     .header-top
       %h1
-        = link_to "#", class: 'header-top__logo' do
+        = link_to root_path, class: 'header-top__logo' do
           = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?891577966", class: 'header-top__logo-img', alt: "mercari"      
       %form.header-top__form{action: "#"}
         %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
@@ -46,7 +46,7 @@
                   %span やることリスト
             %li
               %h2
-                = link_to "#" do
+                = link_to "/users/#{current_user.id}" do
                   %div.mypage
                     = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png'            
                   %span マイページ

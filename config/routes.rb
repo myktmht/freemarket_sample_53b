@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get 'done'
       get 'credit'
       get 'identification', to: 'users#identification'
+      get '/:id', to: 'users#show'
     end
     resources :profiles, only: [:edit]
   end

@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_image
+  before_action :set_item, only: [:edit, :update]
 
   def index
     @ladyitems = get_items(1)
@@ -33,14 +34,12 @@ class ItemsController < ApplicationController
 
   def edit
     redirect_to new_user_session_url unless user_signed_in?
-    @item = Item.find(params[:id])
     10.times { @item.images.build }
 
     @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update!(item_params)
       redirect_to root_path
     else
@@ -54,6 +53,10 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :price, :description, :category_id, :condition, 
     :shipping_fee, :shipping_from, :days_before_shipping, :shipping_method, 
     :trade_status, images_attributes: [:name, :id]).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def set_image

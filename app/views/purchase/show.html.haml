@@ -9,7 +9,7 @@
     .section-buy__main
       .section-buy__main__content-item
         .section-buy__main__content-item__photo
-          = image_tag "/images/purchase-test.jpg", size: "128x128", alt: "商品写真", class: "item-photo"
+          = image_tag ("#{@item.images[0].name}"), size: "128x128", alt: "商品写真", class: "item-photo"
         .section-buy__main__content-item__name
           = @item.name
         .section-buy__main__content-item__price-fee-box

@@ -25,7 +25,9 @@ Rails.application.routes.draw do
       get 'identification', to: 'users#identification'
       get '/:id', to: 'users#show'
     end
-    resources :profiles, only: [:edit]
+    member do
+      get 'profile/edit', to: 'profiles#edit'
+    end
   end
 
   resources :items, only: [:index, :new, :create, :show, :edit, :update] do

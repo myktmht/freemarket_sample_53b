@@ -46,7 +46,7 @@
                   %span やることリスト
             %li
               %h2
-                = link_to "/users/#{current_user.id}" do
+                = link_to user_path(current_user.id), class: 'user-link__signup' do
                   %div.mypage
                     = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png'            
                   %span マイページ

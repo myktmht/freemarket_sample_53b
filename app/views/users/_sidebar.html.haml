@@ -6,7 +6,7 @@
       %nav.mypage-nav
         %ul.mypage-nav-list
           %li
-            = link_to "/users/#{current_user.id}",class: "mypage-nav-list-item" do
+            = link_to user_path(current_user.id),class: "mypage-nav-list-item" do
               ="マイページ"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -108,7 +108,7 @@
         %h3.mypage-nav-head 設定
         %ul.mypage-nav-list
           %li
-            = link_to "/users/#{current_user.id}/profiles/#{current_user.id}/edit",class: "mypage-nav-list-item" do
+            = link_to profile_edit_user_path(current_user.id),class: "mypage-nav-list-item" do
               ="プロフィール"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'

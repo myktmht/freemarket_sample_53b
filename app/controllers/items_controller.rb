@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_image
-  # before_action :set_search
+  before_action :set_search
   before_action :set_item, only: [:edit, :update]
 
   def index

@@ -54,6 +54,14 @@ class ItemsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    if @item.destroy!(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
   
   private
 

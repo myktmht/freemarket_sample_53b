@@ -1,0 +1,107 @@
+= render "shared/single-header"
+.single-main
+  .sell-container
+    %h2.sell-container__title 商品の情報を入力
+    .sell-contents
+      = form_for @item, url: { action: "update" } do |f|
+        = f.hidden_field :user_id, value: "#{current_user.id}"
+        .sell-content
+          .sell-content__images
+            %h3 出品画像
+            %span 必須
+            %p 最大10枚までアップロードできます
+            #sell-images-area
+              .sell-content__image
+                = f.fields_for :images do |image|
+                  = image.file_field :name
+        .sell-content
+          = f.label :name, "商品名"
+          %span 必須
+          = f.text_field :name, placeholder: "商品名（必須40文字まで）", class: "input-default"
+          .sell-content__margin
+            = f.label :description, "商品の説明"
+            %span 必須
+            = f.text_area :description, placeholder: "商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "textarea-default"
+        .sell-content
+          .sell-content__sub-head 
+            %h3 商品の詳細
+          .sell-content__groups
+            .sell-content__group#sell-content-category
+              = f.label :category_id, "カテゴリー"
+              %span 必須
+            .sell-selector#category0
+              = f.collection_select :category_id, @category0, :id, :name, {include_blank: "---"}, class: "select-default"
+              %i.fa.fa-chevron-down.select-default-arrow
+            -# 以下は仮おき。カテゴリーの絞り込みはJSを経由する。
+            -# .sell-selector#category1
+            -#   = f.collection_select :category_id, @category1, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
+            -# .sell-selector#category2
+            -#   = f.collection_select :category_id, @category2, :id, :name, {include_blank: "---"}, class: "select-default"
+            -#   %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :condition, "商品の状態"
+              %span 必須
+              .sell-selector
+                = f.select :condition,[["新品、未使用", 1], ["未使用に近い", 2], ["目立った傷や汚れなし", 3], ["やや傷や汚れあり", 4], ["傷や汚れあり", 5], ["全体的に状態が悪い", 6]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+        .sell-content
+          .sell-content__sub-head 
+            %h3 配送について
+            %i.fa.fa-question-circle
+          .sell-content__groups
+            .sell-content__group
+              = f.label :shipping_fee, "配送料の負担"
+              %span 必須 
+              .sell-selector  
+                = f.select :shipping_fee, [["送料込み(出品者負担)", 1],["着払い(購入者負担)", 2]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :shipping_method, "発送の方法"
+              %span 必須
+              .sell-selector
+                = f.select :shipping_method, [["未定", 1],["クロネコヤマト", 2],["ゆうパック", 3],["ゆうメール", 4]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :shipping_from, "発送元の地域"
+              %span 必須
+              .sell-selector
+                = f.collection_select :shipping_from, Prefecture.all, :id, :name, {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+            .sell-content__group.sell-content__margin
+              = f.label :days_before_shipping, "発送までの日数"
+              %span 必須
+              .sell-selector
+                = f.select :days_before_shipping,[["1~2日で発送", 1], ["2~3日で発送", 2], ["4~7日で発送", 3]], {include_blank: "---"}, class: "select-default"
+                %i.fa.fa-chevron-down.select-default-arrow
+        .sell-content
+          .sell-content__sub-head
+            %h3 販売価格(300〜9,999,999)
+            %i.fa.fa-question-circle
+          .sell-content__calc
+            %ul
+              %li.price
+                .li-left.li-left-price
+                  = f.label :price, "価格"
+                  %span 必須
+                .li-right
+                  .li-right__input
+                    %a &#165;
+                    = f.text_field :price, placeholder: "例）300", class: "li-right__input-default"
+              %li.commission
+                .li-left 販売手数料(10%)
+                .li-right#commission &#045;
+              %li.profit
+                .li-left 販売利益
+                .li-right#profit &#045;
+        .sell-content__submit
+          - prohibited_items = link_to "禁止されている出品","#", target: :_blank
+          - prohibited_conduct = link_to "行為","#", target: :_blank
+          - counterfeit_goods = link_to "偽ブランドの販売", "#", target: :_blank
+          - seller_terms = link_to "加盟店規約", "#"
+          %P #{prohibited_items}、#{prohibited_conduct}を必ずご確認ください。
+          %P またブランド品でシリアルナンバー等がある場合はご記載ください。#{counterfeit_goods}は犯罪であり処罰される可能性があります。
+          %P また、出品をもちまして#{seller_terms}に同意したことになります。
+          = f.submit '変更する', class: "submit-btn"
+          = link_to 'もどる', :back, class:"back-btn"
+= render "shared/single-footer"

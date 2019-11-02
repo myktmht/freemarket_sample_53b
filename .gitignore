@@ -21,3 +21,5 @@ releases/*
 repo/*
 shared/*
 /.env
+.DS_Store
+

@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_image
   # before_action :set_search
+  before_action :set_item, only: [:edit, :update]
 
   def index
     @q = Item.ransack(params[:q])
@@ -12,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    redirect_to new_user_session_url unless user_signed_in?
+    redirect_to login_url unless user_signed_in?
     @item = Item.new
     10.times { @item.images.build }
 
@@ -38,6 +39,21 @@ class ItemsController < ApplicationController
     @q = Item.ransack(search_params)
     @items = @q.result(distinct: true)
   end
+
+  def edit
+    redirect_to new_user_session_url unless user_signed_in?
+    10.times { @item.images.build }
+
+    @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)
+  end
+
+  def update
+    if @item.update!(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
   
   private
 
@@ -45,6 +61,10 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :price, :description, :category_id, :condition, 
     :shipping_fee, :shipping_from, :days_before_shipping, :shipping_method, 
     :trade_status, images_attributes: [:name, :id]).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def set_image

@@ -10,6 +10,7 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe PurchaseHelper, type: :helper do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
+
+# describe PurchaseHelper, type: :helper do
+#   pending "add some examples to (or delete) #{__FILE__}"
+# end

@@ -1,0 +1,266 @@
+.guide-beginner {
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  &__main {
+    background-color: white;
+  }
+  &__title { 
+    background-color: #62acde;
+    &-wrapper {
+      border-bottom: 12px solid #ffd810;
+    }
+    &-img {
+      margin: 0 auto;
+      width: 592px;
+      height: 142px;
+      padding: 26px 0 24px;
+      text-align: center;
+    }
+  }
+  &__introduction {
+    padding: 20px 24px 26px;
+    width: 100%;
+    h3 {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      img {
+        max-width: 600px;
+      }
+    }
+    h4 {
+      max-width: 650px;
+      margin: 20px auto 30px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    &__about-fee {
+      display: block;
+      p {
+        max-width: 650px;
+        margin: 20px auto 0;
+        font-size: 24px;
+        display: block;
+      }
+      span {
+        max-width: 650px;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__flow {
+    padding: 0;
+    width: 680px;
+    margin: 0 auto;
+    &-seller {
+      font-size: 44px;
+      &__line {
+        :after {
+          content: '';
+          display: block;
+          border-bottom: 4px solid #2bb570;
+          clear: both;
+          width: 98%;
+        }
+      }
+      p {
+        max-width: 564px;
+        margin: 20px auto 50px auto;
+      }
+    }
+    &-buyer {
+      font-size: 44px;
+      &__line {
+        :after {
+          content: '';
+          display: block;
+          border-bottom: 4px solid #2377E4;
+          clear: both;
+          width: 98%;
+        }
+      }
+      p {
+        max-width: 564px;
+        margin: 20px auto 50px auto;
+      }
+    }
+  }
+  &__usage {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    .inline {
+      display: inline-block;
+      width: 50%;
+    }
+    &-seller {
+      float: left;
+      height: 80px;
+      font-size: 36px;
+      text-align: center;
+      color: white;
+      background-color: #2BB570;
+      &__title {
+        text-align: center;
+        line-height: 80px;
+        figure {
+          margin: 30px auto 20px;
+          display: block;
+        }
+      }
+    }
+    &-buyer {
+      height: 80px;
+      font-size: 36px;
+      text-align: center;
+      color: white;
+      background-color: #2377e4;
+      &__title {
+        text-align: center;
+        line-height: 80px;
+        figure {
+          margin: 30px auto 20px;
+          display: block;
+        }
+      }
+    }
+  }
+  &__list {
+    @include clearfix_after();
+    &-seller {
+      width: 50%;
+      float: left;
+      ul {
+        margin: 0 auto;
+        max-width: 400px;
+        padding: 10px 1.25% 10px 2.5%;
+        li {
+          margin: 0 0 12px;
+          text-align: center;
+          border: solid 4px #2bb570;
+          color: white;
+          img {
+            max-width: 200px;
+            max-height: 90px;
+          }
+        }    
+      }
+      &__box {
+        position: relative;
+        .subtitle {
+          width: calc(100%-32px);
+          color: #333333;
+          font-size: 22px;
+          line-height: 36px;
+          text-align: left;
+          padding: 2px 32px 0;
+        }
+        h3:before {
+          content: "\f2c4";
+          font-weight: 400;
+          font-family: "FontAwesome";
+          left: 4px;
+          position: absolute;
+          width: 28px;
+          height: 28px;
+        }
+        h3:after {
+          content: "";
+          display: block;
+          border-bottom: 2px solid #dbdbdb;
+          clear: both;
+          width: 98%;
+        }
+        p {
+          position: relative;
+          height: 32px;
+          font-size: 14px;
+          line-height: 32px;
+          background-color: #2bb570;
+          text-align: center;
+        }
+        p:after {
+          content: "\f054";
+          font-weight: 900;
+          font-family: "FontAwesome";
+          position: absolute;
+          right: 4px;
+        }
+      }
+    }
+    &-buyer {
+      width: 50%;
+      float: left;
+      ul {
+        margin: 0 auto;
+        max-width: 400px;
+        max-height: 380px;
+        padding: 10px 1.25% 10px 2.5%;
+        li {
+          margin: 0 0 12px;
+          text-align: center;
+          border: solid 4px #2377e4;
+          color: white;
+          img {
+            max-width: 200px;
+            max-height: 90px;
+          }
+        }
+      }      
+      &__box {
+        position: relative;
+        .subtitle {
+          width: calc(100%-32px);
+          color: #333333;
+          font-size: 22px;
+          line-height: 36px;
+          text-align: left;
+          padding: 2px 32px 0;
+        }
+        h3:before {
+          content: "\f2c4";
+          font-weight: 400;
+          font-family: "FontAwesome";
+          left: 4px;
+          position: absolute;
+          width: 28px;
+          height: 28px;
+        }
+        h3:after {
+          content: "";
+          display: block;
+          border-bottom: 2px solid #dbdbdb;
+          clear: both;
+          width: 98%;
+        }
+        p {
+          position: relative;
+          height: 32px;
+          font-size: 14px;
+          line-height: 32px;
+          background-color: #2377E4;
+          text-align: center;
+        }
+        p:after {
+          content: "\f054";
+          font-weight: 900;
+          font-family: "FontAwesome";
+          position: absolute;
+          right: 4px;
+        }
+      }
+    }
+  }
+  &__text {
+    padding: 10px 2.5% 40px 2.5%;
+    line-height: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+.item-list
+.item-list__name
+.item-list__box
+.item-list__box-show
+figure {
+  font-family: Arial, '游ゴシック体' , 'YuGothic' , 'メイリオ', 'Meiryo', sans-serif;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.18);
+  flex-direction: column-reverse;
+  margin: 0;
+  overflow: hidden;
+  z-index: 0;
+}

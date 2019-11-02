@@ -1,29 +1,30 @@
 
 .item-detail
-  .item-name
-  %h1
-    = @item.name
-  .item-table
-    .item-image
-      =image_tag @item.images[0].name
-    .item-profile
-      %table{:border => "2"}
-        %tr
-          %td 出品者
-          %td #{@item.user.nickname}
-        %tr
-          %td カテゴリー
-          %td カテゴリーページ
-        %tr
-          %td 状態
-          %td #{@item.condition}
-        %tr
-          %td カテゴリー
-          %td #{@item.category.name}
+  .item-detail-box
+    .item-name
+    %h1
+      = @item.name 
+    .item-table
+      .item-image
+        %figure-main
+        =image_tag @item.images[0].name
+      .item-profile
+        %table{:border => "2"}
+          %tr
+            %td 出品者
+            %td #{@item.user.nickname}
+          %tr
+            %td カテゴリー
+            %td カテゴリーページ
+          %tr
+            %td 状態
+            %td #{@item.condition}
+          %tr
+            %td カテゴリー
+            %td #{@item.category.name}
 
   .item-price
-  %span ¥#{@item.price.to_s(:delimited)}
-
+    %span ¥#{@item.price.to_s(:delimited)}
   .item-content
-  %p  #{@item.description}
+    %p  #{@item.description}
 

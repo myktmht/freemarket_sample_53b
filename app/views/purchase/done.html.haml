@@ -12,12 +12,12 @@
           .section-buy__main
             .section-buy__main__content-item
               .section-buy__main__content-item__photo
-                = image_tag '/images/purchase-test.jpg' ,size: "128x128" ,alt: "商品写真" ,class:"item-photo"
+                = image_tag ("#{@item.images[0].name}") ,size: "128x128" ,alt: "商品写真" ,class:"item-photo"
               .item__name
-                アイテム名
+                = @item.name
       .price-fee-box
         .price-fee-box__price
-          ¥ 724
+          = number_to_currency(@item.price, unit: "￥", precision: 0 )
           .price-fee-box__shipping-fee
             送料込み
 

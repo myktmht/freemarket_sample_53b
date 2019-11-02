@@ -59,3 +59,8 @@ end
 # clumb :category do
 #  link "カテゴリー一覧", category_path
 # end
+
+# メルカリ初心者ガイド
+crumb :beginner do
+  link "メルカリ初心者ガイド",  guide_beginner_path
+end

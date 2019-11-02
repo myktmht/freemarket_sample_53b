@@ -23,12 +23,18 @@ Rails.application.routes.draw do
       get 'done'
       get 'credit'
       get 'identification', to: 'users#identification'
+      get '/:id', to: 'users#show'
     end
-    resources :profiles, only: [:edit]
+    member do
+      get 'profile/edit', to: 'profiles#edit'
+    end
   end
 
-  resources :items, only: [:index, :new, :create, :show] do
+  resources :items, only: [:index, :new, :create, :show, :edit, :update] do
     resources :images, only:[:index, :create]
+    collection do
+      get 'search', to: 'items#search'
+    end
   end
     
   resources :card, only: [:new, :show] do
@@ -40,12 +46,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :purchase, only: [:index] do
+  resources :purchase, only: [:index, :show] do
     collection do
-      get 'show',  to: 'purchase#show'
-      get 'index', to: 'purchase#index'
-      post 'pay',  to: 'purchase#pay'
-      get 'done',  to: 'purchase#done'
+      get  'show',  to: 'purchase#show'
+      get  '/:id/index', to: 'purchase#index',as:"item_buy"
+      post '/:id/pay',   to: 'purchase#pay',as:"item_pay"
+      get  '/:id/done',  to: 'purchase#done',as:"buy_done"
     end
   end
+
+  get 'guide/beginner', to: 'guide#beginner'
+
 end

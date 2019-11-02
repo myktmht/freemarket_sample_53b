@@ -6,7 +6,8 @@
           %figure
             = link_to "#", class: "img" do
               = image_tag("//static.mercdn.net/thumb/members/984751724.jpg?1423524395",width: "60",height: "60") 
-              %h2.bold Kuki
+              %h2.bold 
+              = @user.nickname
               .mypage-number
                 %div
                   評価

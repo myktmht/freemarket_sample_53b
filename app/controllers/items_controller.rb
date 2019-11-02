@@ -81,6 +81,6 @@ class ItemsController < ApplicationController
   end
 
   def set_search
-    @q = Item.search(params[:q])
+    @q = Item.ransack(params[:q])
   end
 end

@@ -6,7 +6,7 @@
       %nav.mypage-nav
         %ul.mypage-nav-list
           %li
-            = link_to "#",class: "mypage-nav-list-item.active" do
+            = link_to user_path(current_user.id),class: "mypage-nav-list-item" do
               ="マイページ"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -32,7 +32,7 @@
                 = fa_icon 'angle-right'
 
           %li
-            = link_to "#",class: "mypage-nav-list-item" do
+            = link_to new_item_path,class: "mypage-nav-list-item" do
               ="出品する"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -108,7 +108,7 @@
         %h3.mypage-nav-head 設定
         %ul.mypage-nav-list
           %li
-            = link_to "#",class: "mypage-nav-list-item" do
+            = link_to profile_edit_user_path(current_user.id),class: "mypage-nav-list-item" do
               ="プロフィール"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -118,7 +118,7 @@
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
           %li
-            = link_to "#",class: "mypage-nav-list-item" do
+            = link_to paying_card_index_path,class: "mypage-nav-list-item" do
               ="支払い方法"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -128,7 +128,7 @@
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
           %li
-            = link_to "#",class: "mypage-nav-list-item" do
+            = link_to identification_users_path,class: "mypage-nav-list-item" do
               ="本人情報"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
@@ -138,7 +138,7 @@
               %i.icon-arrow-right
                 = fa_icon 'angle-right'
           %li
-            = link_to "#",class: "mypage-nav-list-item" do
+            = link_to logout_path,class: "mypage-nav-list-item" do
               ="ログアウト"
               %i.icon-arrow-right
                 = fa_icon 'angle-right'

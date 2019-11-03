@@ -5,10 +5,10 @@
     = link_to signup_path(resource_name), class: "login__no-account__btn login-btn" do
       新規会員登録
   .login__form-inner
-    %button.facebook-login.login-btn{onclick: "#"} 
+    %button.facebook-login.login-btn{onclick: "/users/auth/facebook/callback"} 
       %i.fa.fa-facebook-square
       Facebookでログイン 
-    %button.google-login.login-btn{onclick: "#"} Googleでログイン
+    %button.google-login.login-btn{onclick: "/users/auth/google/callback"} Googleでログイン
   .login__form-inner_second
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field

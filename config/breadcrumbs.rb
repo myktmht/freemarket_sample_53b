@@ -46,13 +46,13 @@ end
 # マイページ>支払い方法 ※マイページ完成次第、下のコメントアウトを外す。
 crumb :paying do
   link "支払い方法", paying_card_index_path
-  # parent :mypage
+  parent :mypage
 end
 
 # マイページ>支払い方法 ※マイページ完成次第、下のコメントアウトを外す。
 crumb :pay do
-  link "支払い方法", card_path
-  # parent :mypage
+  link "支払い方法", card_path(current_user)
+  parent :mypage
 end
 
 # # カテゴリー一覧

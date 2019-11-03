@@ -8,22 +8,22 @@ end
 #   link "#{user.nickname}", user_path(user)
 # end
 
-# # マイページ
-# crumb :mypage do |user|
-#   link "マイページ", user_path(user)
-# end
+# マイページ
+crumb :mypage do
+  link "マイページ", user_path(current_user)
+end
 
 # マイページ>本人情報の確認
 crumb :identification do
   link "本人情報の登録", identification_users_path
-  # parent :mypage
+  parent :mypage
 end
 
 # # マイページ>ログアウト
-# crumb :logout do
-#   link "ログアウト", logout_path
-#   # parent :mypage
-# end
+crumb :logout do
+  link "ログアウト", logout_path
+  parent :mypage
+end
 
 # # マイページ>お知らせ
 # crumb :notification do
@@ -46,13 +46,13 @@ end
 # マイページ>支払い方法 ※マイページ完成次第、下のコメントアウトを外す。
 crumb :paying do
   link "支払い方法", paying_card_index_path
-  # parent :mypage
+  parent :mypage
 end
 
 # マイページ>支払い方法 ※マイページ完成次第、下のコメントアウトを外す。
 crumb :pay do
-  link "支払い方法", card_path
-  # parent :mypage
+  link "支払い方法", card_path(current_user)
+  parent :mypage
 end
 
 # # カテゴリー一覧

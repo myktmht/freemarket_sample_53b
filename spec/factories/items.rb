@@ -9,7 +9,7 @@ FactoryBot.define do
     days_before_shipping  {1}
     shipping_method       {1}
     trade_status          {1}
+    category_id           {1}
     user_id               {1} 
-    category_id           {4}
   end
 end

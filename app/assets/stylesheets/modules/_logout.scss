@@ -3,18 +3,10 @@
   background-color: $color-white;
   &-main{
     margin: 0 auto;
+    padding-top: 40px;
     height: 1400px;
     width: 1020px;
-    .lside {
-      float: left;
-      width: 280px;
-      margin: 40px 40px 0 0;
-      // サイドバー可視化のための仮おき
-      height: 900px;
-      background-color: gray;
-    }
     &__content {
-      margin: 40px 0 auto;
       float: left;
       height: 100%;
       width: calc(100%-280px);

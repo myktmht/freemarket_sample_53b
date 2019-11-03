@@ -6,7 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
  
 #   protected
  
-#   def after_sign_up_path_for(resource)
-#      my_page_path
-#   end
+  def after_sign_up_path_for(resource)
+     guide_beginner_path
+  end
 end

@@ -68,6 +68,35 @@ describe ItemsController do
     end
   end
 
+  describe 'GET #edit' do
+    before do
+      @user = FactoryBot.create(:user)
+      @category = FactoryBot.create(:category)
+    end
+
+    # editアクション、@itemのテスト
+    it "assigns the requested item to @item" do
+      item = create(:item)
+      get :edit, params:{ id: item }
+      expect(assigns(:item)).to eq item
+    end
+
+    # ビュー遷移のテスト
+    it "renders the :edit template" do
+      sign_in @user
+      item = create(:item)
+      get :edit, params:{ id: item }
+      expect(response).to render_template :edit
+    end
+
+    # 未ログイン時、ログイン画面にリダイレクトされているか
+    it 'redirects the page to /login' do
+      item = create(:item)
+      get :edit, params:{ id: item }
+      expect(response).to redirect_to login_path
+    end
+  end
+
   # # 保留。imageの生成も必要。
   # describe 'POST #create' do
   #   let(:item) { create(:item) }

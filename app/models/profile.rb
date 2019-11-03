@@ -1,7 +1,6 @@
 class Profile < ApplicationRecord
   belongs_to :user
   # バリデーション
-  validates :body,           presence: true
   validates :birth_year,     presence: true
   validates :birth_month,    presence: true
   validates :birth_day,      presence: true

@@ -30,7 +30,8 @@
 @import "modules/single-footer";
 
 // user_sign_up_scss
-@import "users_signup/index";
+@import "users_signup/signup";
+@import "users_signup/registration";
 
 // logout_scss
 @import "modules/logout";
@@ -41,5 +42,17 @@
 //@import "mypage_card";
 @import "./cards";
 @import "./_buy";
+
+// item_detail_scss
+@import "modules/_other-item";
+@import "modules/_item-detail";
+@import "modules/_buy-btn";
+@import "modules/_links";
+
+// @import "modules/_item-comments"
 @import "./user-profile-edit-page";
-@import "./_identification"
+@import "./_identification";
+@import "./search";
+
+// guide_scss
+@import "modules/guide-beginner";

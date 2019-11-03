@@ -7,7 +7,7 @@
     .item-table
       .item-image
         %figure-main
-        =image_tag @item.images[0].name
+        =image_tag ("#{@item.images[0].name}")
       .item-profile
         %table{:border => "2"}
           %tr

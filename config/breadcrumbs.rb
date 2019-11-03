@@ -8,10 +8,10 @@ end
 #   link "#{user.nickname}", user_path(user)
 # end
 
-# # マイページ
-# crumb :mypage do |user|
-#   link "マイページ", user_path(user)
-# end
+# マイページ
+crumb :mypage do
+  link "マイページ", user_path
+end
 
 # マイページ>本人情報の確認
 crumb :identification do

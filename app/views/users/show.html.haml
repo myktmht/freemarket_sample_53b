@@ -4,6 +4,8 @@
 %body
 .wrapper
   = render partial: 'shared/header'
+  - breadcrumb :mypage
+  = render partial: 'render/breadcrumbs'
   = render partial: 'users/mypage'
   = render partial: 'shared/sell-btn'
   = render partial: 'shared/app-baner'

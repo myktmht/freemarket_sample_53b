@@ -33,6 +33,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    @whole_items =Item.where(user_id: @item.user_id).where.not(id: @item.id).order('id DESC').limit(9)
   end
 
   def search

@@ -1,0 +1,16 @@
+.profile_container.clearfix
+  %section.profile_content
+    %h2.profile_content__head
+      プロフィール
+    .profile_content__form
+      %form{action: user_registration_path, method: "POST"}
+        %input{name: "#", type: "hidden", value: "#"}
+        .profile_content__form_input
+          %figure
+            = image_tag "/images/member_photo_noimage_thumb.png", height: "60", width: "60", alt: "", class: "profile_content__form_input_img"
+          %input.input-default{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: @user.nickname}/
+        .profile_content__form_content
+          %textarea.textarea-default{name: "body", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", type: "text"}
+            = @user.profile.body
+          %input{name: "#", type: "hidden", value: "#"}/
+          %button.btn-default.btn-red{type: "submit"} 変更する

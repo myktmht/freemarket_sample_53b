@@ -1,3 +1,8 @@
+/*
+*= require dropzone/basic
+*= require dropzone/dropzone
+*/
+
 @import "./_reset";
 @import "font-awesome";
 @import "mixins/mixin";
@@ -13,10 +18,23 @@
 @import "modules/app-baner";
 @import "modules/top-footer";
 
-// user_signup_scss
+// mypage_scss
+@import "modules/mypage";
+
+// subpage_scss
+@import "modules/breadcrumbs";
+
+// user_sign_in_scss
 @import "modules/users-sign_in";
 @import "modules/single-header";
 @import "modules/single-footer";
+
+// user_sign_up_scss
+@import "users_signup/signup";
+@import "users_signup/registration";
+
+// logout_scss
+@import "modules/logout";
 
 @import "modules/items-new";
 //@import "common_layout/form";
@@ -30,4 +48,11 @@
 @import "modules/_item-detail";
 @import "modules/_buy-btn";
 @import "modules/_links";
+
 // @import "modules/_item-comments"
+@import "./user-profile-edit-page";
+@import "./_identification";
+@import "./search";
+
+// guide_scss
+@import "modules/guide-beginner";

@@ -1,13 +1,27 @@
 class UsersController < ApplicationController
-    # users>application_controllerを継承しています。
-      # def index
-      # end
+
+      #def index
+      #end
+
+      def new
+      end
+
     
       def show
+        @user = User.find(params[:id])
       end
-    
-      # def edit
-      # end
+
+      def number
+      end
+
+      def address
+      end
+
+      def credit
+      end
+
+      def done
+      end
     
       # def update
       #   # if current_user.update(user_params)
@@ -16,6 +30,9 @@ class UsersController < ApplicationController
       #   #   render :edit
       #   # end
       # end
+
+      def identification
+      end
       
       # private
     

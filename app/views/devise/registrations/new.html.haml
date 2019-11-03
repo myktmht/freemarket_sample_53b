@@ -1,23 +1,40 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %em (7文字以上)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.signup-registration
+  = render 'shared/single-header'
+  .single-main
+    .signup-registrations-container
+      %h2.signup-registrations-container__title 会員情報入力
+      .signup-registrations-contents
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          .signup-registrations-content.input-group
+            .signup-registrations-content__nickname
+              = f.label :nickname, "ニックネーム"
+              %span 必須
+            .signup-registrations-content__txt
+              = f.text_field :nickname, placeholder: "例）メルカリ太郎", autofocus: true, class: "input-default"
+          .signup-registrations-content.input-group__next
+            .signup-registrations-content__email
+              = f.label :email, "メールアドレス"
+              %span 必須
+            .signup-registrations-content__txt
+              = f.text_field :email, placeholder: "PC・携帯どちらでも可", autofocus: true, class: "input-default"
+          .signup-registrations-content.input-group__next
+            .signup-registrations-content__password
+              = f.label :password, "パスワード"
+              %span 必須
+            .signup-registrations-content__txt
+              = f.password_field :password, placeholder: "7文字以上", autofocus: true, class: "input-default"
+          .signup-registrations-content.input-group__next
+            .signup-registrations-content__password_confirmation
+              = f.label :password_confirmation, "パスワード(確認)"
+              %span 必須
+            .signup-registrations-content__txt
+              = f.password_field :password_confirmation, placeholder: "7文字以上", autofocus: true, class: "input-default"
+          .signup-registrations__comment
+            - tos = link_to "利用規約","#", target: :_blank
+            %P 次のボタンを押すことにより、#{tos}に同意したものとみなします
+          .signup-registrations__submit
+            = f.submit "登録する", class: "submit-btn"
+          .signup-registrations__about
+            %p
+              = link_to "本人情報の登録について＞", "#"
+  = render "shared/single-footer"

@@ -39,6 +39,10 @@
       cursor: pointer;
     }
     .facebook-login {
+      a:link { color: white; }
+      a:visited { color: white; }
+      a:hover { color: rgb(230, 230, 230); }
+      a:active { color: white; }
       background-color: $color-facebook;
       color: white;
       position: relative;
@@ -51,6 +55,10 @@
       }
     }
     .google-login {
+      a:link { color: black; }
+      a:visited { color: black; }
+      a:hover { color: rgb(95, 95, 95); }
+      a:active { color: black; }
       border: 1px solid #979797;
       background: #fff url(/images/google.svg) no-repeat 3px top;
       margin-top: 16px;

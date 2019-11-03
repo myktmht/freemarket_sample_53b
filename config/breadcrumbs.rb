@@ -10,20 +10,20 @@ end
 
 # マイページ
 crumb :mypage do
-  link "マイページ", user_path
+  link "マイページ", user_path(current_user)
 end
 
 # マイページ>本人情報の確認
 crumb :identification do
   link "本人情報の登録", identification_users_path
-  # parent :mypage
+  parent :mypage
 end
 
 # # マイページ>ログアウト
-# crumb :logout do
-#   link "ログアウト", logout_path
-#   # parent :mypage
-# end
+crumb :logout do
+  link "ログアウト", logout_path
+  parent :mypage
+end
 
 # # マイページ>お知らせ
 # crumb :notification do

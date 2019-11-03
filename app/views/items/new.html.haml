@@ -13,7 +13,12 @@
             #sell-images-area
               .sell-content__image
                 = f.fields_for :images do |image|
-                  = image.file_field :name
+                  = image.file_field :name, class: "image_uploader"
+                .sell-content__image-zone
+                  .sell-content__image-zone__text
+                    %p ドラッグアンドドロップ
+                    %p またはクリックしてファイルをアップロード
+                  #preview
         .sell-content
           = f.label :name, "商品名"
           %span 必須

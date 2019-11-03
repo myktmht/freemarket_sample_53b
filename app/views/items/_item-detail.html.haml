@@ -1,9 +1,8 @@
-
 .item-detail
   .item-detail-box
     .item-name
-    %h1
-      = @item.name 
+      %h1
+        = @item.name 
     .item-table
       .item-image
         %figure-main
@@ -11,20 +10,19 @@
       .item-profile
         %table{:border => "2"}
           %tr
-            %td 出品者
+            %th 出品者
             %td #{@item.user.nickname}
           %tr
-            %td カテゴリー
+            %th カテゴリー
             %td カテゴリーページ
           %tr
-            %td 状態
+            %th 状態
             %td #{@item.condition}
           %tr
-            %td カテゴリー
+            %th カテゴリー
             %td #{@item.category.name}
 
   .item-price
     %span ¥#{@item.price.to_s(:delimited)}
   .item-content
     %p  #{@item.description}
-

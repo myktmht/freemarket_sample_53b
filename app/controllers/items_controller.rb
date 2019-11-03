@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    redirect_to new_user_session_url unless user_signed_in?
+    redirect_to login_url unless user_signed_in?
     10.times { @item.images.build }
 
     @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)

@@ -26,7 +26,7 @@ h1{
 img {
   width: 40%;
   height: auto;
-  object-fit: cover; /* この一行を追加するだけ！ */
+  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
@@ -35,8 +35,6 @@ img {
 .item-table{
   display: inline-block;
   background-color: white;
-  // text-align: center;
-  // flex-direction: row;
 }
 
 .item-profile{
@@ -44,8 +42,6 @@ img {
   display: inline-block;
   font-size: 20px;
   background-color: white;
-  // display: table-cell;
-  // vertical-align: middle;
 }
 table{
   margin-left: auto;

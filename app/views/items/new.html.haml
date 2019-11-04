@@ -11,14 +11,23 @@
             %span 必須
             %p 最大10枚までアップロードできます
             #sell-images-area
-              .sell-content__image
-                = f.fields_for :images do |image|
-                  = image.file_field :name, class: "image_uploader"
-                .sell-content__image-zone
-                  .sell-content__image-zone__text
-                    %p ドラッグアンドドロップ
-                    %p またはクリックしてファイルをアップロード
-                  #preview
+
+              .sell-content__image-zone
+                %ul#preview
+                
+                  %li.preview
+                    .preview-img
+                      = image_tag ("")
+                    .preview-button
+                      %a.preview-button-delete 削除
+
+
+            .sell-content__image
+              = f.fields_for :images do |image|
+                = image.file_field :name, class: "image_uploader"
+              -# .sell-content__image-zone__description
+              -#   .sell-content__image-zone__description-text
+              -#     %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
         .sell-content
           = f.label :name, "商品名"
           %span 必須

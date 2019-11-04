@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function(){
 
   $(function(){
-    // １つ目のフォームを除き、他を非表示にしておく
+  // ファイルアップロード
     $(".image_uploader").not(".image_uploader:first-child").css('display','none')
 
     $('.image_uploader').on('change', function() {

@@ -15,8 +15,7 @@ class ItemsController < ApplicationController
   def new
     redirect_to login_url unless user_signed_in?
     @item = Item.new
-    # 10.times { @item.images.build }
-    @item.images.build
+    10.times { @item.images.build }
     
     @category0 = Category.eager_load(children: {children: :children}).where(parent_id: 0)
     # 以下は仮おき。カテゴリーの絞り込みはJSを経由する。

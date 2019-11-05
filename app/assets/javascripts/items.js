@@ -4,7 +4,13 @@ $(document).on('turbolinks:load', function(){
   // ファイルアップロード
     $(".image_uploader").not(".image_uploader:first-child").css('display','none')
 
-    $('.image_uploader').on('change', function() {
+    // edit
+    $('.item-edit-form>.image_uploader').on('change', function() {
+      $(this).next().next('.image_uploader').css('display', 'block');
+    });
+
+    // new
+    $('.item-new-form>.image_uploader').on('change', function() {
       $(this).next('.image_uploader').css('display', 'block');
     });
   });

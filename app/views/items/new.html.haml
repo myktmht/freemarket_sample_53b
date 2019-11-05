@@ -11,8 +11,7 @@
             %span 必須
             %p 最大10枚までアップロードできます
             #sell-images-area
-              .sell-content__image-zone
-            .sell-content__image
+            .sell-content__image.item-new-form
               = f.fields_for :images do |image|
                 = image.file_field :name, class: "image_uploader"
         .sell-content

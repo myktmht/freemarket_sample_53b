@@ -1,0 +1,52 @@
+.slide {
+  display: none;
+  color: $color-black;
+  height: 290px;
+  width: 100%;
+  &-1 {
+    background-color: #EDF6F5;
+    position: relative;
+    &__wrapper {
+      overflow: hidden;
+      -webkit-box-align: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 860px;
+      padding: 0 40px;
+      &__left {
+        z-index: 100;
+        h1 {
+          font-size: 60px;
+        }
+        h2 {
+          font-size: 12px;
+          margin-bottom: 24px;
+        }
+        .app-link {
+          display: inline-block;
+          img {
+            height: 38px;
+            width: 128px;
+          }
+        }
+      }
+      &__right {
+        z-index: -10;
+        display: block;
+        height: 100%;
+        img {
+          position: absolute;
+          max-width: 300px;
+          right: 100px;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  &-2 {
+    background-color: #EDECEA;
+  }
+}
+.active {
+  display: block;
+}

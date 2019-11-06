@@ -1,13 +1,13 @@
 .slider {
   position: relative;
-  height: 290px;
+  height: 390px;
   width: 100%;
   .button-prev {
     opacity: 0.8;
     font-size: 18px;
     z-index: 100;
     position: absolute;
-    left: 14px;
+    left: 24px;
     top: 50%;
   }
   .button-next {
@@ -15,14 +15,15 @@
     font-size: 18px;
     z-index: 100;
     position: absolute;
-    right: 14px;
+    right: 24px;
     top: 50%;
   }
 }
 .slide {
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2) inset;
   display: none;
   color: $color-black;
-  height: 290px;
+  height: 390px;
   width: 100%;
   &-1 {
     background-color: #EDF6F5;
@@ -33,12 +34,14 @@
       max-width: 860px;
       padding: 0 40px;
       &__left {
+        margin-top: 20px;
         z-index: 10;
         h1 {
           font-size: 60px;
+          font-weight: 600;
         }
         h2 {
-          font-size: 12px;
+          font-size: 18px;
           margin-bottom: 24px;
         }
         .app-link {
@@ -50,14 +53,15 @@
         }
       }
       &__right {
-        z-index: -10;
         display: block;
         height: 100%;
         img {
+          z-index: 1;
           position: absolute;
-          max-width: 300px;
+          max-height: 390px;
           right: 100px;
           bottom: 0;
+          opacity: 0.9;
         }
       }
     }

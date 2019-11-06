@@ -4,7 +4,6 @@ class Item < ApplicationRecord
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images
   belongs_to :card, optional: true
-  has_many :images
   
   validates :name, length: { maximum: 40 }
 end

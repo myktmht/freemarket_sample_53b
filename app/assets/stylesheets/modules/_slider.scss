@@ -8,8 +8,6 @@
     position: relative;
     &__wrapper {
       overflow: hidden;
-      -webkit-box-align: center;
-      align-items: center;
       margin: 0 auto;
       max-width: 860px;
       padding: 0 40px;
@@ -45,6 +43,16 @@
   }
   &-2 {
     background-color: #EDECEA;
+    &__wrapper {
+      overflow: hidden;
+      max-width: 860px;
+      padding: 0 40px;
+      img {
+        display: block;
+        max-height: 280px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 .active {

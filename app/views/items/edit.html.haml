@@ -103,5 +103,6 @@
           %P またブランド品でシリアルナンバー等がある場合はご記載ください。#{counterfeit_goods}は犯罪であり処罰される可能性があります。
           %P また、出品をもちまして#{seller_terms}に同意したことになります。
           = f.submit '変更する', class: "submit-btn"
+          = render partial: 'items/destroy-btn'
           = link_to 'もどる', :back, class:"back-btn"
 = render "shared/single-footer"

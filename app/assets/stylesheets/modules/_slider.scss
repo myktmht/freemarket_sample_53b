@@ -1,3 +1,24 @@
+.slider {
+  position: relative;
+  height: 290px;
+  width: 100%;
+  .button-prev {
+    opacity: 0.8;
+    font-size: 18px;
+    z-index: 100;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+  }
+  .button-next {
+    opacity: 0.8;
+    font-size: 18px;
+    z-index: 100;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+  }
+}
 .slide {
   display: none;
   color: $color-black;
@@ -12,7 +33,7 @@
       max-width: 860px;
       padding: 0 40px;
       &__left {
-        z-index: 100;
+        z-index: 10;
         h1 {
           font-size: 60px;
         }

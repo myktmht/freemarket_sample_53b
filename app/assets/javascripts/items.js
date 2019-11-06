@@ -1,5 +1,33 @@
 $(document).on('turbolinks:load', function(){
 
+    // トップページ - スライダー
+    $(function(){
+      function toggleChangeBtn() {
+        var slideIndex = $('.slide').index($('.active'));/*表示中のスライドのindexを取得*/
+        $('.button').show();/*両ボタンを表示*/
+        if(slideIndex == 0){/*一番最初の要素が表示されているとき*/
+          $('.prev').hide();/*prevボタンを隠す。*/
+        }else if(slideIndex == $('.slide').length - 1){/*一番最後の要素が表示されているとき*/
+          $('.next').hide();/*nextボタンを隠す。*/
+        }
+      }
+      toggleChangeBtn();
+  
+      $('.next').click(function() {
+          var $displaySlide = $('.active');
+          $displaySlide.removeClass('active');
+          $displaySlide.next().addClass('active');
+          toggleChangeBtn();
+      });
+      $('.prev').click(function() {
+          var $displaySlide = $('.active');
+          $displaySlide.removeClass('active');
+          $displaySlide.prev().addClass('active');
+          toggleChangeBtn();
+      });
+    });
+
+  // 商品出品
   $(function(){
   // ファイルアップロード
     $(".image_uploader").not(".image_uploader:first-child").css('display','none')
@@ -28,31 +56,5 @@ $(document).on('turbolinks:load', function(){
       $('#commission').text('-');
       $('#profit').text('-');
     }
-  });
-
-  $(function(){
-    function toggleChangeBtn() {
-      var slideIndex = $('.slide').index($('.active'));/*表示中のスライドのindexを取得*/
-      $('.button').show();/*両ボタンを表示*/
-      if(slideIndex == 0){/*一番最初の要素が表示されているとき*/
-        $('.prev').hide();/*prevボタンを隠す。*/
-      }else if(slideIndex == $('.slide').length - 1){/*一番最後の要素が表示されているとき*/
-        $('.next').hide();/*nextボタンを隠す。*/
-      }
-    }
-    toggleChangeBtn();
-
-    $('.next').click(function() {
-        var $displaySlide = $('.active');
-        $displaySlide.removeClass('active');
-        $displaySlide.next().addClass('active');
-        toggleChangeBtn();
-    });
-    $('.prev').click(function() {
-        var $displaySlide = $('.active');
-        $displaySlide.removeClass('active');
-        $displaySlide.prev().addClass('active');
-        toggleChangeBtn();
-    });
   });
 });

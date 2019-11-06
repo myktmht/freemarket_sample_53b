@@ -1,13 +1,19 @@
 $(document).on('turbolinks:load', function(){
 
-  // // カテゴリーの絞り込み(要検討)
-  // // 商品の詳細＞カテゴリー
-  // $("#category0").on("change", function(){
-  // // 大カテゴリー(0)選択時の値を取得
-  //   var category0_val = $("option:selected").val();
-  // // 中カテゴリー(1)選択時の値を取得
-  //   var category1_val = $("option:selected").val();
-  // });
+  $(function(){
+  // ファイルアップロード
+    $(".image_uploader").not(".image_uploader:first-child").css('display','none')
+
+    // edit
+    $('.item-edit-form>.image_uploader').on('change', function() {
+      $(this).next().next('.image_uploader').css('display', 'block');
+    });
+
+    // new
+    $('.item-new-form>.image_uploader').on('change', function() {
+      $(this).next('.image_uploader').css('display', 'block');
+    });
+  });
 
   // 販売価格
   $('#item_price').on('keyup', function(){

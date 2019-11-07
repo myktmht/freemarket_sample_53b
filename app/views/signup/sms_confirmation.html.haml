@@ -1,0 +1,6 @@
+.form
+  = form_for @profile, url: sms_confirmation_signup_index_path,method: :post do |f|
+    = label :sms_number, '認証番号'
+    = f.text_field :phone_number, placeholder: '認証番号を入力'
+    %p.registration-form-text SMSで届いた認証番号を入力してください
+    = f.submit '認証して終了'

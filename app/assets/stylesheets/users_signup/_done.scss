@@ -1,0 +1,26 @@
+.done.message {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.image__kari {
+  max-width: 100%;
+  margin: 40px 0 0 0;
+}
+
+.btn-default.btn-red {
+  display: block;
+  margin: 40px 25%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 50%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}

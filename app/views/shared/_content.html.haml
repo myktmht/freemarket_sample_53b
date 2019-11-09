@@ -5,26 +5,30 @@
       .tag-list
         %ul 
           %li
-            = link_to "#" do
+            = link_to "#ladyitems" do
               レディース
           %li
-            = link_to "#" do
+            = link_to "#manitems" do
               メンズ
           %li 
-            = link_to "#" do
+            = link_to "#cameraitems" do
               家電・スマホ・カメラ
           %li 
-            = link_to "#" do
+            = link_to "#hobbyitems" do
               おもちゃ・ホビー・グッズ
     .item
-      - if @ladyitems.present?
-        = render partial: 'shared/item-list', locals: {items: @ladyitems}
-      - if @manitems.present?
-        = render partial: 'shared/item-list', locals: {items: @manitems}
-      - if @cameraitems.present?
-        = render partial: 'shared/item-list', locals: {items: @cameraitems}
-      - if @hobyitems.present?
-        = render partial: 'shared/item-list', locals: {items: @hobyitems}
+      .item-list#ladyitems
+        - if @ladyitems.present?
+          = render partial: 'shared/item-list', locals: {items: @ladyitems}
+      .item-list#manitems
+        - if @manitems.present?
+          = render partial: 'shared/item-list', locals: {items: @manitems}
+      .item-list#cameraitems
+        - if @cameraitems.present?
+          = render partial: 'shared/item-list', locals: {items: @cameraitems}
+      .item-list#hobbyitems
+        - if @hobyitems.present?
+          = render partial: 'shared/item-list', locals: {items: @hobyitems}
     .tag.brand
       %h2 人気のブランド
       .tag-list

@@ -1,0 +1,24 @@
+.slider
+  .button.button-prev.prev
+    %i.fa.fa-chevron-circle-left
+  .button.button-next.next
+    %i.fa.fa-chevron-circle-right
+  .slide.slide-1.active
+    .slide-1__wrapper
+      .slide-1__wrapper__left
+        %h1 
+          %span スマホでかんたん
+          %br
+          %span フリマアプリ
+        %h2
+          %span メルカリはスマホカメラからすぐに出品できる
+          %br
+          %span 購入時も安心な独自システムのアプリです。
+        .app-link
+          = image_tag "slider/app-store.svg", alt: "App Store"
+          = image_tag "slider/google-play.svg", alt: "Google Play"
+      .slide-1__wrapper__right
+        = image_tag "slider/mercari-top1.png", alt: "メルカリ"
+  .slide.slide-2
+    .slide-2__wrapper
+      = image_tag "slider/mercari-top2.png", alt: "メルカリなら新品も中古もお得！キャンプ用品 大特集！"

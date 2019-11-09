@@ -1,0 +1,5 @@
+.form
+  = form_for @profile, url: sms_authentication_signup_index_path,method: :post do |f|
+    = label :nickname, '携帯電話の番号'
+    = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
+    = f.submit 'SMSを送信する'

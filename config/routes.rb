@@ -31,6 +31,16 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :signup ,only: [:index,:create] do
+    collection do
+      get 'sms_authentication' 
+      post 'sms_authentication',to: 'signup#sms_post'
+      get 'sms_confirmation' 
+      post 'sms_confirmation',to: 'signup#sms_check'
+      get 'address' 
+    end
+  end
+
   resources :items, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :images, only:[:index, :create]
     collection do

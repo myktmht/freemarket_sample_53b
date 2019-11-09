@@ -1,9 +1,9 @@
 .signup-registration {
   box-sizing: border-box;
-  .small-link {
+  a.small-link {
     color: $color-blue;
   }
-  a:hover{
+  a.small-link:hover{
     text-decoration: underline;
     opacity: 0.8;
   }

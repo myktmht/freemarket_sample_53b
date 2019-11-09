@@ -1,5 +1,12 @@
 .signup-registration {
   box-sizing: border-box;
+  a.small-link {
+    color: $color-blue;
+  }
+  a.small-link:hover{
+    text-decoration: underline;
+    opacity: 0.8;
+  }
   .single-main {
     background-color: $color-white;
     color: $color-black;
@@ -34,12 +41,25 @@
           height: 28px;
           margin-top: 8px;
           @include input-default;
+          &-half {
+            width: calc(50% - 40px);
+            height: 28px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 16px;
+            padding: 10px 16px 8px;
+            margin-top: 8px;
+            &__first {
+              margin-right: 4px;
+            }
+          }
         }
         label {
           font-weight: 600;
           font-size: 14px;
         }
-        span {
+        span.require {
           // 必須表示
           font-size: 12px;
           font-weight: bold;
@@ -50,11 +70,70 @@
           border-radius: 2px;
           vertical-align: top;
         }
+        span.date {
+          font-size: 14px;
+        }
+        &__sub {
+          &-head {
+          margin-top: 32px;
+          font-weight: 600;
+          font-size: 16px;
+          }
+          &-txt {
+            margin: 8px 0 0;
+            padding: 0;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+        }
+        &__name {
+          width: 100%;
+        }
+        &__birth {
+          height: 56px;
+          .birth-selector{
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 76px;
+            display: inline-block;
+            .select-default {
+              padding: 0 10px;
+              width: 100%;
+              @include select-default;
+              &-arrow {
+                // 任意の下向きの矢を置く場合、クラスに-arrowをつける
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                color: gray;
+              }
+            }
+          }
+          select {
+            // デフォルトの下向きの矢を非表示
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          ::-ms-expand {
+            display: none;
+          }
+        }
+        .caution {
+          color: #888;
+          font-size: 14px;
+          margin: 8px 0 0;
+          line-height: 1.5;
+        }
       }
       &__comment {
         max-width: 343px;
         margin: 32px auto 0;
         font-size: 14px;
+        text-align: center;
       }
       &__submit {
         width: 343px;
@@ -81,3 +160,4 @@
     }
   }
 }
+

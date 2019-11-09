@@ -10,33 +10,74 @@
           .signup-registrations-content.input-group
             .signup-registrations-content__nickname
               = f.label :nickname, "ニックネーム"
-              %span 必須
+              %span.require 必須
             .signup-registrations-content__txt
               = f.text_field :nickname, placeholder: "例）メルカリ太郎", autofocus: true, class: "input-default"
           .signup-registrations-content.input-group__next
             .signup-registrations-content__email
               = f.label :email, "メールアドレス"
-              %span 必須
+              %span.require 必須
             .signup-registrations-content__txt
               = f.text_field :email, placeholder: "PC・携帯どちらでも可", autofocus: true, class: "input-default"
           .signup-registrations-content.input-group__next
             .signup-registrations-content__password
               = f.label :password, "パスワード"
-              %span 必須
+              %span.require 必須
             .signup-registrations-content__txt
               = f.password_field :password, placeholder: "7文字以上", autofocus: true, class: "input-default"
           .signup-registrations-content.input-group__next
             .signup-registrations-content__password_confirmation
               = f.label :password_confirmation, "パスワード(確認)"
-              %span 必須
+              %span.require 必須
             .signup-registrations-content__txt
               = f.password_field :password_confirmation, placeholder: "7文字以上", autofocus: true, class: "input-default"
+          .signup-registrations-content
+            %h3.signup-registrations-content__sub-head 本人確認
+            %p.signup-registrations-content__sub-txt 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+
+          .signup-registrations-content.input-group__next
+            .signup-registrations-content__txt
+              %label お名前(全角)
+              -# %span.require 必須
+            .signup-registrations-content__name
+              %input.input__first-name.input-default-half.input-default-half__first
+              %input.input__last-name.input-default-half
+
+          .signup-registrations-content.input-group__next
+            .signup-registrations-content__txt
+              %label お名前カナ(全角)
+              -# %span.require 必須
+            .signup-registrations-content__name
+              %input.input__first-name_kana.input-default-half.input-default-half__first
+              %input.input__last-name_kana.input-default-half
+
+          .signup-registrations-content.input-group__next
+            %label 生年月日
+            -# %span.require 必須
+            .signup-registrations-content__birth
+              .birth-selector
+                %select.select-default
+                %i.fa.fa-chevron-down.select-default-arrow
+              %span 年
+              .birth-selector
+                %select.select-default
+                %i.fa.fa-chevron-down.select-default-arrow
+              %span 月
+              .birth-selector
+                %select.select-default
+                %i.fa.fa-chevron-down.select-default-arrow
+              %span 日
+
+          .signup-registrations-content
+            .caution
+              %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+              
           .signup-registrations__comment
-            - tos = link_to "利用規約","#", target: :_blank
+            - tos = link_to "利用規約","#", target: :_blank, class: "small-link"
             %P 次のボタンを押すことにより、#{tos}に同意したものとみなします
           .signup-registrations__submit
             = f.submit "登録する", class: "submit-btn"
           .signup-registrations__about
             %p
-              = link_to "本人情報の登録について＞", "#"
+              = link_to "本人情報の登録について＞", "#", class: "small-link"
   = render "shared/single-footer"

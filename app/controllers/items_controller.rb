@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_image
   before_action :set_search
-  before_action :set_item, only: [:edit, :update]
+  before_action :set_item, only: [:edit, :update, :destroy]
 
   def index
     @q = Item.ransack(params[:q])
@@ -51,6 +51,14 @@ class ItemsController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to :back
     end
   end
   

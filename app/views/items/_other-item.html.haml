@@ -5,7 +5,7 @@
     .item-list__box-show
       - @whole_items.each do |item|
         .visibility
-          = link_to "#" do
+          = link_to item_path(item.id) do
             %figure
               %figcaption.name
                 %span #{item.name}

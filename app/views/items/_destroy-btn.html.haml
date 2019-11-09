@@ -1,0 +1,5 @@
+- if @item.user_id == current_user.id
+  %p.destroy-btn-p or
+  .items-destroy-btn
+    = link_to item_path(@item.id), method: :delete, class: "destroy-btn" do
+      = "商品を削除する"

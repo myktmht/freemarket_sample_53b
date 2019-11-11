@@ -1,10 +1,11 @@
 .header {
   position: relative;
   background-color: white;
+  border-bottom: 1px solid rgb(204,204,204);
   .header-inner {
     width: 1020px;
     margin: 0 auto;
-    padding: 8px 0 0;
+    padding-top: 8px;
     .header-top {
       display: flex;
       align-items: center;
@@ -31,15 +32,15 @@
             height: 40px;
             line-height: 1.5;
             font-size: 16px;
+            border: 1px solid rgb(204, 204, 204);
           }
           .hidden {
             position: absolute;
             margin-top: 0px;
             top: 0;
             right: 0;
-            height: 40px;
+            height: 38px;
             width: 30px;
-            height: 40px;
             border-radius: 4px;
             .fa.fa-search {
               background: $color-white;
@@ -49,9 +50,8 @@
               top: 0;
               right: 0;
               display: flex;
-              height: 40px;
+              height: 38px;
               width: 40px;
-              height: 40px;
               cursor: pointer;
               font: 14px FontAwesome;
               color: black;
@@ -64,6 +64,7 @@
     }
     .header-navbox {
       margin: 8px 0 0;
+      padding-bottom: 8px;
       @include clearfix();
       h2:hover {
         .fa.fa-heart, .fa.fa-bell, .fa.fa-check {
@@ -90,13 +91,13 @@
                 @include list-ul();
               }
               .fa.fa-tag {
-                color: rgb(234, 53, 45);
+                color: $color-red;
               }
               .fa.fa-bell {
                 font-size: 16px;
               }
               span {
-                line-height: 44px;
+                line-height: 36px;
               }
             }
           }
@@ -124,7 +125,7 @@
         a {
           position: relative;
           display: block;
-          height: 44px;
+          height: 32px;
           line-height: 32px;
           color: #333;
           text-decoration: none;
@@ -151,17 +152,18 @@
         }
         .user-link {
           display: flex;
+          font-size: 14px;
           .signup {
             text-align: center;
             .user-link__signup {
               box-sizing: border-box;
-              background-color: rgb(234, 53, 45);
+              background-color: $color-red;
               color: rgb(255, 255, 255);
               border-width: 0.5px;
               border-style: solid;
-              border-color: rgb(234, 53, 45);
+              border-color: $color-red;
               border-radius: 4px;
-              padding: 6px 14px;
+              padding: 0 14px;
             }
           }
           .signin {
@@ -170,16 +172,16 @@
             .user-link__signin {
               box-sizing: border-box;
               background-color: rgb(255, 255, 255);
-              color: rgb(0, 149, 238);
+              color: $color-blue;
               border-width: 0.5px;
               border-style: solid;
-              border-color: rgb(0, 149, 238);
+              border-color: $color-blue;
               border-radius: 4px;
-              padding: 6px 14px;
+              padding: 0 14px;
             }
           }
           .user-link__signin:hover {
-            background-color:  rgb(0, 149, 238);
+            background-color:  $color-blue;
             color: rgb(255, 255, 255);
           }
         }

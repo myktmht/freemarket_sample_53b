@@ -1,5 +1,18 @@
-.form
-  = form_for @profile, url: sms_authentication_signup_index_path,method: :post do |f|
-    = label :nickname, '携帯電話の番号'
-    = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
-    = f.submit 'SMSを送信する'
+- content_for :title do
+  電話番号認証
+.single-container
+  = render 'shared/single-header'
+  %main.single-main
+    %section.single-main__container
+      .single-main__container__header 電話番号の確認
+      %h2.form
+        = form_for @profile, url: sms_authentication_signup_index_path,method: :post do |f|
+          = label :nickname, '携帯電話の番号'
+          %h2.textbox
+          = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', class: "text_input"
+          %p.registration-form-text.sms_non2.message 本人確認のため、携帯電話のSMS（ショートメッセージサービス）を利用して認証を行います。
+          = f.submit 'SMSを送信する',class: "btn-default btn-red2"
+          %p.sms_non2.message ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          %p.sms_non3.message - 
+          = link_to "電話番号の確認が必要な理由>" , "#", class: "why"
+          %image.image__kari{src: "https://i.gyazo.com/3115ad076f4ae0ac5d647ccec944218e.png"}

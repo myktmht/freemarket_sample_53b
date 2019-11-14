@@ -24,9 +24,10 @@
   }
   .item-table{
     float: left;
-    background-color: white;
+    background-color:white;
     margin-top: 16px;
     width: 100%;
+
     .item-image {
       width: 50%;
       img {
@@ -54,10 +55,13 @@
           text-align: left;
           font-weight: 400;
           background: #fafafa;
+          padding: 15px 10px;
         }
         td {
           width: 61%;
           background: #fff;
+          text-align: left;
+          padding: 15px 10px;
         }
       }
     }

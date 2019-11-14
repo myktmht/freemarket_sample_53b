@@ -14,13 +14,22 @@
             %td #{@item.user.nickname}
           %tr
             %th カテゴリー
-            %td カテゴリーページ
+            %td #{@item.category.name}
           %tr
-            %th 状態
+            %th 商品の状態
             %td #{@item.condition}
           %tr
-            %th カテゴリー
-            %td #{@item.category.name}
+            %th 配送料の負担
+            %td #{@item.shipping_fee}
+          %tr
+            %th 配送の方法
+            %td #{@item.shipping_method}
+          %tr
+            %th 配送元地域
+            %td #{@item.shipping_from}
+          %tr
+            %th 発送日の目安
+            %td #{@item.days_before_shipping}
 
   .item-price
     %span ¥#{@item.price.to_s(:delimited)}

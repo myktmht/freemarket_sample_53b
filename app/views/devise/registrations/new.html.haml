@@ -71,7 +71,11 @@
           .signup-registrations-content
             .caution
               %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
-              
+          .signup-registrations-content.recaptcha
+            = recaptcha_tags
+            %p
+              %span.error
+                = flash[:recaptcha_error] 
           .signup-registrations__comment
             - tos = link_to "利用規約","#", target: :_blank, class: "small-link"
             %P 次のボタンを押すことにより、#{tos}に同意したものとみなします

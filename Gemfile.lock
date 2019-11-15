@@ -168,6 +168,7 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    json (2.2.0)
     jwt (2.2.1)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -286,6 +287,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    recaptcha (5.2.1)
+      json
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -415,6 +418,7 @@ DEPENDENCIES
   rails (~> 5.2.3)
   rails-controller-testing
   ransack
+  recaptcha
   rspec-rails
   sass-globbing
   sass-rails (~> 5.0)

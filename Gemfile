@@ -91,3 +91,4 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'ransack'
 gem 'twilio-ruby'
+gem "recaptcha", require: "recaptcha/rails"

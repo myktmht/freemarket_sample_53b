@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rails-i18n', '~> 5.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -91,3 +92,4 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'ransack'
 gem 'twilio-ruby'
+gem "recaptcha", require: "recaptcha/rails"

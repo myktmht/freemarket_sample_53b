@@ -1,6 +1,4 @@
-a:link,a:visited {
-  color: rgb(0, 195, 255);
-}
+
 
 .qw {
   margin: 100px 25%;
@@ -8,10 +6,13 @@ a:link,a:visited {
   text-align: left;
 }
 
-h2 {
+h3 {
   margin: 10px;
-  text-align: center;
   margin: 0,175px,0; 
+  a:link,a:visited {
+    color: rgb(0, 195, 255);
+    font-size: 17px;
+  }
 }
 
 .text_input {
@@ -63,3 +64,4 @@ h2 {
 .single-main__container__header {
   border-bottom: .99px solid rgb(204, 204, 204);
 }
+

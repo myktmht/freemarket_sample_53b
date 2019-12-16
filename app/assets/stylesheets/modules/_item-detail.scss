@@ -4,15 +4,15 @@
   box-sizing: border-box;
   color: black;
   overflow: visible;
-  width:60%;
   margin:40px auto 40px;
+  padding-bottom: 40px;
   .item-detail-box {
     height: auto;
     width: 700px;
     background-color:white;
     text-align: center;
     margin: 0 auto;
-    padding: 24px 40px 40px;
+    padding: 24px 40px;
   }
   .item-name {
     h1 {
@@ -21,13 +21,17 @@
       margin: auto;
       line-height: 1.4;
     }
+    .item-wording {
+      padding-top: 8px;
+      color: #888;
+      font-size: 14px;
+    }
   }
   .item-table{
-    float: left;
     background-color:white;
     margin-top: 16px;
     width: 100%;
-
+    @include clearfix_after();
     .item-image {
       width: 50%;
       img {
@@ -50,6 +54,13 @@
         margin-left: auto;
         margin-right: auto;
         font-size: 14px;
+        border: 1px solid #f5f5f5;
+        a {
+          color: $color-blue;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         th {
           width: 39%;
           text-align: left;
@@ -67,13 +78,32 @@
     }
   }
   .item-price{
-    font-size: 50px;
+    font-size: 32px;
     text-align: center;
     background-color: white;
+    padding-top: 24px;
+    .tax-included {
+      font-size: 10px;
+    }
   }
   .item-content{
     font-size: 30px;
     text-align: center;
     background-color: white;
+    padding-top: 32px;
+    .item-description {
+      font-size: 18px;
+      white-space: pre-wrap;
+      margin: 0 40px;
+      text-align: left;
+    }
+  }
+  &__bottom {
+    margin: 0 auto 40px;
+    padding: 24px 40px;
+    height: auto;
+    width: 780px;
+    background-color: white;
+    box-sizing: border-box;
   }
 }

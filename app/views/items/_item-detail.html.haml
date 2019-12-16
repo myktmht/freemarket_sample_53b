@@ -3,6 +3,7 @@
     .item-name
       %h1
         = @item.name 
+      %p.item-wording 『#{@item.name}』は、#{@item.user.nickname}さんから出品されました。#{@item.category.name}の商品です。
     .item-table
       .item-image
         %figure-main
@@ -11,7 +12,7 @@
         %table{:border => "2"}
           %tr
             %th 出品者
-            %td #{@item.user.nickname}
+            %td= link_to "#{@item.user.nickname}", "#"
           %tr
             %th カテゴリー
             %td #{@item.category.name}
@@ -31,7 +32,10 @@
             %th 発送日の目安
             %td #{@item.days_before_shipping}
 
-  .item-price
-    %span ¥#{@item.price.to_s(:delimited)}
-  .item-content
-    %p  #{@item.description}
+    .item-price
+      %span ¥#{@item.price.to_s(:delimited)}
+      %span.tax-included (税込)
+    - if current_user
+      = render partial: 'items/buy-btn'
+    .item-content
+      %p.item-description  #{@item.description}

@@ -4,8 +4,7 @@
 .wrapper
   = render partial: 'shared/header'
   = render partial: 'items/item-detail'
-  - if current_user
-    = render partial: 'items/buy-btn'
+
   -# = render partial: 'items/item-comments'
   = render partial: 'items/other-item'
   = render partial: 'shared/app-baner'

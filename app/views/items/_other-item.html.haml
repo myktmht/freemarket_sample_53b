@@ -1,15 +1,16 @@
-.item-list
-  .item-list__name
-    %h3 #{@item.user.nickname}のその他の出品
-  .item-list__box
-    .item-list__box-show
-      - @whole_items.each do |item|
-        .visibility
-          = link_to item_path(item.id) do
-            %figure
-              %figcaption.name
-                %span #{item.name}
-              .price
-                %span ¥#{item.price.to_s(:delimited)}
-                = image_tag ("#{item.images[0].name}")
-
+.item-detail__bottom
+  .item-detail-box
+    .item-list
+      .item-list__name
+        %h3 #{@item.user.nickname}のその他の出品
+      .item-list__box
+        .item-list__box-show
+          - @whole_items.each do |item|
+            .visibility
+              = link_to item_path(item.id) do
+                %figure
+                  %figcaption.name
+                    %span #{item.name}
+                  .price
+                    %span ¥#{item.price.to_s(:delimited)}
+                    = image_tag ("#{item.images[0].name}")

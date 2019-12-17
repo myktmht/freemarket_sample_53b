@@ -2,6 +2,9 @@
   height: 1300px;
   width: 100vw;
   background-color: $color-white;
+  a :link, :visited, :hover, :active {
+    color: $color-black;
+  }
   .container {
     box-sizing: border-box;
     padding-top: 5px;
@@ -31,6 +34,7 @@
       margin-left: 60px;
       &__search-result {
         height: 45px;
+        color: $color-black;
         &__item-name {
           display: inline-block;
           font-size: 25px;

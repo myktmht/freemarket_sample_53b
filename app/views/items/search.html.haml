@@ -25,10 +25,11 @@
       .container__right__search-item
         .container__right__search-item__results
         - @items.each do |item|
-          .container__right__search-item__results__box
-            .container__right__search-item__results__box__image-box
-              = image_tag ("#{item.images[0].name}"), alt: '画像１', class: 'owl-box'
-            .container__right__search-item__results__box__image-box__name-box
-              = item.name
-            .container__right__search-item__results__box__image-box__price
-              = number_to_currency(item.price, unit: "￥", precision: 0 )
+          = link_to item_path(item) do
+            .container__right__search-item__results__box
+              .container__right__search-item__results__box__image-box
+                = image_tag ("#{item.images[0].name}"), alt: '画像１', class: 'owl-box'
+              .container__right__search-item__results__box__image-box__name-box
+                = item.name
+              .container__right__search-item__results__box__image-box__price
+                = number_to_currency(item.price, format: "%u%n", unit: "¥", precision: 0 )

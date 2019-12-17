@@ -1,29 +1,30 @@
-- content_for :title do
-  電話番号認証
-.single-container
-  = render 'shared/single-header'
-  %main.single-main
-    %section.single-main__container
-      .single-main__container__header 電話番号認証
-      %h2.form
-        = form_for @profile, url: sms_confirmation_signup_index_path,method: :post do |f|
-          = label :sms_number, '認証番号', class: "sms_non.message"
-          %h2.textbox
-          = f.text_field :phone_number, placeholder: '認証番号を入力', class: "text_input"
-          %p.registration-form-text.sms_non2.message SMSで届いた認証番号を入力してください
-          = f.submit '認証して完了',class: "btn-default btn-red"
-      
-      %form.registration-form
-        .registration-form__content
-          %p.sms_non.message 30秒たっても認証番号が届かない方へ
-          %p.sms_non2.message 電話で認証番号を聞くこともできます。
-          %button.btn-default.btn-red{type: "~/signup/address"} 電話で認証番号を聞く（通話無料）
+.sms-confirmation
+  - content_for :title do
+    電話番号認証
+  .single-container
+    = render 'shared/single-header'
+    %main.single-main
+      %section.single-main__container
+        .single-main__container__header 電話番号認証
+        %h2.form
+          = form_for @profile, url: sms_confirmation_signup_index_path,method: :post do |f|
+            = label :sms_number, '認証番号', class: "sms_non.message"
+            %h2.textbox
+            = f.text_field :phone_number, placeholder: '認証番号を入力', class: "text_input"
+            %p.registration-form-text.sms_non2.message SMSで届いた認証番号を入力してください
+            = f.submit '認証して完了',class: "btn-default btn-red"
+        
+        %form.registration-form
+          .registration-form__content
+            %p.sms_non.message 30秒たっても認証番号が届かない方へ
+            %p.sms_non2.message 電話で認証番号を聞くこともできます。
+            %button.btn-default.btn-red{type: "~/signup/address"} 電話で認証番号を聞く（通話無料）
 
-      %h3
-        .tel__content
-          %p.sms_non.message 認証番号を再送することもできます。もう一度電話番号を入力してください。
-          %p.sms_non3.message - 
-          = link_to "電話番号を再度入力する" , "#", class:"qw"
-          %p.sms_non3.message - 
-          %p.sms_non2.message SMSが届かない場合は<a href="#">SMS受信設定</a>を確認して、もう一度電話番号を入力してください。
-          %image.image__kari{src: "https://i.gyazo.com/3115ad076f4ae0ac5d647ccec944218e.png"}
+        %h3
+          .tel__content
+            %p.sms_non.message 認証番号を再送することもできます。もう一度電話番号を入力してください。
+            %p.sms_non3.message - 
+            = link_to "電話番号を再度入力する" , "#", class:"qw"
+            %p.sms_non3.message - 
+            %p.sms_non2.message SMSが届かない場合は<a href="#">SMS受信設定</a>を確認して、もう一度電話番号を入力してください。
+            %image.image__kari{src: "https://i.gyazo.com/3115ad076f4ae0ac5d647ccec944218e.png"}

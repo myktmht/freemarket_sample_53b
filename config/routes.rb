@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     get 'signup/registration',  to: 'users/registrations#new'
     # get 'signup/number',         to: 'users/registrations#number'
     # get 'signup/address',        to: 'users/registrations#address'
-    # get 'signup/credit',         to: 'users/registrations#credit'
-    # get 'signup/done',           to: 'users/registrations#done'
+    get 'signup/credit',         to: 'users/registrations#credit'
+    get 'signup/done',           to: 'users/registrations#done'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
